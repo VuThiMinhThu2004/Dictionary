@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DBConfig {
-    private static final String DATABASE_URL = "jdbc:sqlite:test123.db";
+    private static final String DATABASE_URL = "jdbc:sqlite:engData.db";
     static ConnectionSource connectionSource;
 
     static {
@@ -44,8 +44,7 @@ public class DBConfig {
     }
 
     public static void LoadData() throws SQLException {
-        //src/main/resources/englishDictionary.csv
-        String csvFile = "englishDictionary.csv";
+        String csvFile = "src/main/resources/englishDictionary.csv";
         List<English> englishList = parseEnglish(csvFile);
         for (English english : englishList) {
             englishDAO.updateWord(english);
