@@ -9,7 +9,7 @@ module com.example.dictionary {
     opens com.example.dictionary to javafx.fxml;
     exports com.example.dictionary;
 
-    opens Models;
+    opens Dictionary.Models;
 
     exports Dictionary.Controllers to javafx.fxml;
 }

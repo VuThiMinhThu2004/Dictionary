@@ -2,7 +2,6 @@ package com.example.dictionary;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -19,8 +18,7 @@ public class HelloApplication extends Application {
     public void start(Stage primaryStage) throws Exception {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("temp.fxml"));
-            Parent root = fxmlLoader.getRoot();
-            Scene scene = new Scene(root, 320, 240);
+            Scene scene = new Scene(fxmlLoader.getRoot(), 320, 240);
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (Exception e) {
@@ -28,6 +26,7 @@ public class HelloApplication extends Application {
             e.printStackTrace();
         }
     }
+
 
     public static void main(String[] args) {
         launch();
