@@ -24,13 +24,17 @@ public class Addition {
     private TextArea synonym;
 
     @FXML
-    private TextArea antonyms;
+    private TextArea antonym;
 
+    private TextArea partOfSpeech;
 
     public void resetText() {// xóa nội dung văn bản của một số trường TextArea.
         exampleTextArea.setText("");
         meaning.setText("");
         pronunciation.setText("");
+        synonym.setText("");
+        antonym.setText("");
+        partOfSpeech.setText("");
     }
 
     public void handleAdd()  {//ấy thông tin về một từ từ cơ sở dữ liệu
@@ -47,9 +51,15 @@ public class Addition {
         String ex = exampleTextArea.getText();
         String mn = meaning.getText();
         String pro = pronunciation.getText();
+        String sy = synonym.getText();
+        String an = antonym.getText();
+        String posSpeech = partOfSpeech.getText();
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Tu tieng anh moi:");
+        alert.setTitle("App Dictionary");
+        alert.setHeaderText("Add word");
+        alert.setContentText("New Word: " + word + "\nExplaination: "
+                + ex + "\nPart of speech :" + pro + "\n");
         alert.showAndWait();
     }
 }

@@ -2,7 +2,7 @@ package Dictionary;
 
 import Dictionary.Models.English;
 import Dictionary.Models.EnglishDataAccessObject;
-import com.j256.ormlite.jdbc.JdbcConnectionSource;//connect database
+import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 
