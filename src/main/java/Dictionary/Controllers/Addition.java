@@ -1,9 +1,14 @@
 package Dictionary.Controllers;
 
+import Dictionary.Models.English;
+import Dictionary.Models.EnglishDataAccessObject;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+
+import java.awt.event.ActionEvent;
+import java.sql.SQLException;
 
 public class Addition {
 
@@ -45,8 +50,11 @@ public class Addition {
         }
     }
 
+
     @FXML
-    protected void HandleClickBtn() {
+    protected void HandleClickBtn(ActionEvent event) throws SQLException {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
         String word = newWord.getText();
         String ex = exampleTextArea.getText();
         String mn = meaning.getText();
@@ -55,11 +63,31 @@ public class Addition {
         String an = antonym.getText();
         String posSpeech = partOfSpeech.getText();
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("App Dictionary");
-        alert.setHeaderText("Add word");
-        alert.setContentText("New Word: " + word + "\nExplaination: "
-                + ex + "\nPart of speech :" + pro + "\n");
-        alert.showAndWait();
+        if(word.isEmpty() || word.isBlank()){
+            alert.setHeaderText("Adding word failed");
+            alert.setContentText("Word cannot be empty, please try again");
+            alert.showAndWait();
+        } else if (word.trim().isEmpty() || mn.trim().isEmpty()) {
+            alert.setHeaderText("Adding word failed");
+            alert.setContentText("Meaning cannot be empty, please try again");
+            alert.showAndWait();
+        } else {
+            // Thêm từ mới vào cơ sở dữ liệu ở đây (với đoạn mã đã có)
+            English english = new English(word, mn, pro, posSpeech, ex, sy, an);
+            if(!EnglishDataAccessObject.updateWord(english)){
+                return;
+            }
+            alert.setTitle("App Dictionary");
+            alert.setHeaderText("Adding word successfully");
+            alert.setContentText("New Word: " + word + "\nExplaination: "
+                    + ex + "\nPart of speech :" + "Part of speech: " + posSpeech
+                    + "\nSynonym: " + sy + "\nAnonym: "+ an);
+            alert.showAndWait();
+
+        }
+    }
+
+
+    public void HandleClickBtn(javafx.event.ActionEvent actionEvent) {
     }
 }
