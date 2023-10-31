@@ -6,9 +6,16 @@ import java.sql.SQLException;
 import java.util.Objects;
 
 public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
+
+    public EnglishDataAccessObject() throws SQLException {
+        super(English.class);
+    }
+
     public EnglishDataAccessObject (ConnectionSource connectionSource) throws SQLException, SQLException {
         super(connectionSource, English.class);
     }
+
+
 
     public long findIdByWord(String word) throws SQLException {
         return this.queryBuilder().where().eq("Word", word).queryForFirst().getId();
