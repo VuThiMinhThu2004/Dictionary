@@ -4,6 +4,7 @@ module com.example.dictionary {
     requires ormlite.jdbc;
     requires java.sql;
     requires java.desktop;
+    requires org.apache.commons.csv;
 
 
     opens com.example.dictionary to javafx.fxml;
@@ -11,6 +12,8 @@ module com.example.dictionary {
 
     opens Dictionary.Models;
     opens Dictionary.Controllers;
+
+
 
     exports Dictionary.Controllers to javafx.fxml;
 
