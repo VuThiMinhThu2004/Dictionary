@@ -10,6 +10,8 @@ import javafx.scene.control.TextArea;
 import java.awt.event.ActionEvent;
 import java.sql.SQLException;
 
+import static Dictionary.DBConfig.*;
+
 public class Addition {
 
     @FXML
@@ -74,7 +76,8 @@ public class Addition {
         } else {
             // Thêm từ mới vào cơ sở dữ liệu ở đây (với đoạn mã đã có)
             English english = new English(word, mn, pro, posSpeech, ex, sy, an);
-            if(!EnglishDataAccessObject.updateWord(english)){
+            EnglishDataAccessObject hehe = new EnglishDataAccessObject();
+            if(!hehe.updateWord(english)){
                 return;
             }
             alert.setTitle("App Dictionary");
