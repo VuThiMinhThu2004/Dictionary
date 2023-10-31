@@ -71,7 +71,7 @@ public class Addition {
             alert.setHeaderText("Adding word failed");
             alert.setContentText("Meaning cannot be empty, please try again");
             alert.showAndWait();
-        } else {
+        } else{
             // Thêm từ mới vào cơ sở dữ liệu ở đây (với đoạn mã đã có)
             English english = new English(word, mn, pro, posSpeech, ex, sy, an);
             if(!EnglishDataAccessObject.updateWord(english)){

@@ -133,12 +133,12 @@ public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
 
     //kiem tra neu Tu khong ton tai trong CSDL thi add va CSDL
     public boolean updateWord(English x) throws SQLException {
-        if(x.getWord().isEmpty() || x.getMeaning().isEmpty()){
+        if (x.getWord().isEmpty() || x.getMeaning().isEmpty()) {
             return false;
         }
         try {
             English english = this.queryBuilder().where().eq("Word", x.getWord()).queryForFirst();
-            if (english != null && !english.getWord().isEmpty()) {
+                if (english != null && !english.getWord().isEmpty()) {
                 if(english.getMeaning().isEmpty()){
                     english.setMeaning(x.getMeaning());
                 }
