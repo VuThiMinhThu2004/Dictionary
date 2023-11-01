@@ -6,6 +6,8 @@ module com.example.dictionary {
     requires java.desktop;
     requires org.apache.commons.csv;
 
+    requires gson;
+    requires java.scripting;
 
     opens com.example.dictionary to javafx.fxml;
     exports com.example.dictionary;

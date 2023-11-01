@@ -69,22 +69,26 @@ public class DBConfig {
         try (Reader reader = new FileReader(csvFile);
              CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT)) {
             for (CSVRecord csvRecord : csvParser) {
-                String word = csvRecord.get(0);
-                String pos = csvRecord.get(1);
-                String def = csvRecord.get(2);
-                String example = csvRecord.size() > 3 ? csvRecord.get(3) : "";
-                String synonyms = csvRecord.size() > 4 ? csvRecord.get(4) : "";
-                String antonyms = csvRecord.size() > 5 ? csvRecord.get(5) : "";
+                try {
+                    String word = csvRecord.get(0);
+                    String pos = csvRecord.get(1);
+                    String def = csvRecord.get(2);
+                    String example = csvRecord.size() > 3 ? csvRecord.get(3) : "";
+                    String synonyms = csvRecord.size() > 4 ? csvRecord.get(4) : "";
+                    String antonyms = csvRecord.size() > 5 ? csvRecord.get(5) : "";
 
-                English english = new English();
-                english.setWord(word);
-                english.setType(pos);
-                english.setMeaning(def);
-                english.setExample(example);
-                english.setSynonym(synonyms);
-                english.setAntonyms(antonyms);
+                    English english = new English();
+                    english.setWord(word);
+                    english.setType(pos);
+                    english.setMeaning(def);
+                    english.setExample(example);
+                    english.setSynonym(synonyms);
+                    english.setAntonyms(antonyms);
 
-                englishList.add(english);
+                    englishList.add(english);
+                } catch (Exception e) {
+                    System.out.println(e.getMessage() + " " + csvRecord.get(0));
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
