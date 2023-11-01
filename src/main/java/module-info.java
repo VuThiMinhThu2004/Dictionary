@@ -8,6 +8,7 @@ module com.example.dictionary {
 
     requires gson;
     requires java.scripting;
+    requires jlayer;
 
     opens com.example.dictionary to javafx.fxml;
     exports com.example.dictionary;

@@ -1,16 +1,20 @@
 package Utils;
 
+import Dictionary.Services.VoiceService;
+
 import java.util.Scanner;
 
 import static Dictionary.DBConfig.englishDAO;
 
 public class Quiz {
+    private VoiceService voiceService = new VoiceService();
+
     enum QuestionType {
         ChooseMeaning,
         ChooseWord,
-        FillBlank,
         ListenAndChoose,
         ListenAndFillBlank,
+        FillBlank,
     }
 
     private String ques;
@@ -18,12 +22,28 @@ public class Quiz {
     private int scores;
     private int type;
     private String answer;
+    private int choose;
+
+    public int getChoose() {
+        return choose;
+    }
+
+    public void setChoose(int choose) {
+        this.choose = choose;
+    }
 
     Quiz() {
         this.type = 0;
         this.scores = 0;
         this.ques = "";
         this.answer = "";
+    }
+
+    public void quiz() {
+        for (int i = 0; i < 5; i++) {
+            startQuiz();
+        }
+        endQuiz();
     }
 
     public void startQuiz() {
@@ -33,7 +53,7 @@ public class Quiz {
         initQuiz(type);
         System.out.println(getQuestion(type, ques));
         getInput(answer);
-        while(!checkAnswer()) {
+        while (!checkAnswer()) {
             System.out.println("Wrong answer, try again!");
             getInput(answer);
         }
@@ -56,21 +76,24 @@ public class Quiz {
     }
 
     public void initQuiz(int type) {
-        if (type == 0) {
-            for (int i = 0; i < 4; i++) {
-                choices[i] = getRandomMeaning();
-            }
-            // get random from 0 to 3
-            int random = (int) (Math.random() * 4);
-            setQues(getWordFromMeaning(choices[random]));
-        } else {
-            for (int i = 0; i < 4; i++) {
-                choices[i] = getRandomWord();
-            }
-            int random = (int) (Math.random() * 4);
-            setQues(getMeaningFromWord(choices[random]));
-            ques.replace(choices[random], "______");
-
+        switch (QuestionType.values()[type]) {
+            case ChooseMeaning:
+                initChooseMeaningQuiz();
+                break;
+            case ChooseWord:
+                initChooseWordQuiz();
+                break;
+            case FillBlank:
+                initFillBlankQuiz();
+                break;
+            case ListenAndChoose:
+                initListenQuiz();
+                break;
+            case ListenAndFillBlank:
+                initListenQuiz();
+                break;
+            default:
+                break;
         }
     }
 
@@ -80,6 +103,52 @@ public class Quiz {
         } else {
             return answer.equals(getWordFromMeaning(ques));
         }
+    }
+
+    // public boolean checkAnswer() {
+    //     switch (type) {
+    //         case 0:
+    //             return answer.equals(getMeaningFromWord(ques));
+    //         case 1:
+    //             return answer.equals(getWordFromMeaning(ques));
+    //         case 2:
+    //             return answer.equals(getWordFromMeaning(ques));
+    //         case 3:
+
+    //     }
+    // }
+    public void initChooseMeaningQuiz() {
+        for (int i = 0; i < 4; i++) {
+            choices[i] = getRandomMeaning();
+        }
+        // get random from 0 to 3
+        int random = (int) (Math.random() * 4);
+        setQues(getWordFromMeaning(choices[random]));
+    }
+
+    public void initChooseWordQuiz() {
+        for (int i = 0; i < 4; i++) {
+            choices[i] = getRandomWord();
+        }
+        int random = (int) (Math.random() * 4);
+        setQues(getMeaningFromWord(choices[random]));
+    }
+
+    public void initListenQuiz() {
+        for (int i = 0; i < 4; i++) {
+            choices[i] = getRandomWord();
+        }
+        int random = (int) (Math.random() * 4);
+        setQues(getMeaningFromWord(choices[random]));
+        ques.replace(choices[random], "______");
+    }
+
+    public void initFillBlankQuiz() {
+        for (int i = 0; i < 4; i++) {
+            choices[i] = getRandomWord();
+        }
+        int random = (int) (Math.random() * 4);
+        setQues(getWordFromMeaning(choices[random]));
     }
 
     public void increaseScore() {
@@ -111,7 +180,7 @@ public class Quiz {
     // get word from meaning
     public static String getWordFromMeaning(String meaning) {
         try {
-            return englishDAO.queryBuilder().where().eq("meaning", meaning).query().get(0).getWord();
+            return englishDAO.queryBuilder().where().eq("meaning", meaning).queryForFirst().getWord();
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return "";
@@ -122,7 +191,7 @@ public class Quiz {
 
     public static String getMeaningFromWord(String word) {
         try {
-            return englishDAO.queryBuilder().where().eq("word", word).query().get(0).getMeaning();
+            return englishDAO.queryBuilder().where().eq("word", word).queryForFirst().getMeaning();
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return "";

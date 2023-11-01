@@ -155,11 +155,9 @@ public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
                 } else if (!x.getMeaning().isEmpty() && !english.getMeaning().contains(x.getMeaning()) && !Objects.equals(x.getMeaning().trim().strip(), english.getMeaning())) {
                     english.setMeaning(english.getMeaning() + "\n" + x.getMeaning());
                 }
-                if(english.getType().isEmpty()){
-                    english.setType(x.getType());
-                    english.setPronunciation(x.getPronunciation());
-                }else if(!x.getType().isEmpty() && !english.getType().contains(x.getType()) && !Objects.equals(x.getType(), english.getType()))
-                    english.setType(english.getType() + "\n" + x.getType());
+                english.setType(x.getType());
+                english.setPronunciation(x.getPronunciation());
+
 
                 if(english.getAntonyms().isEmpty()){
                     english.setAntonyms(x.getAntonyms());
@@ -213,11 +211,11 @@ public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
     }
 
     public List<English> containWord(String word) throws SQLException {//word la mot phan cau tu
-        Where<English, Long> english = this.queryBuilder().where().like("Word", "%" + word + "%");
+        Where<English, Long> english = this.queryBuilder().where().like("Word", word + "%");
         return new ArrayList<>(english.query());
     }
     public List<English> containWord(English english) throws SQLException {
-        Where<English, Long> english1 = this.queryBuilder().where().like("Word", "%" + english.getWord() + "%");
+        Where<English, Long> english1 = this.queryBuilder().where().like("Word",english + "%");
         return new ArrayList<>(english1.query());
     }
 
@@ -275,6 +273,51 @@ public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
         return this.queryForAll();
     }
 
+    public String renderDefinition(English english) {
+        if (english == null) {
+            return "";
+        }
+        StringBuilder definitionBuilder = new StringBuilder();
+        if (!english.getType().isEmpty()) {
+            definitionBuilder.append("Part of Speech: ").append(english.getType()).append("\n").append("\n");
+        } else {
+            definitionBuilder.append("Part of Speech: ").append("No part of speech found").append("\n").append("\n");
+        }
+        if (!english.getMeaning().isEmpty()) {
+            definitionBuilder.append("Definition: ").append(english.getMeaning()).append("\n").append("\n");
+        } else {
+            definitionBuilder.append("Definition: ").append("No definition found").append("\n").append("\n");
+        }
+        if (!english.getSynonym().isEmpty()) {
+            definitionBuilder.append("Synonym: ").append(english.getSynonym()).append("\n").append("\n");
+        } else {
+            definitionBuilder.append("Synonym: ").append("No synonym found").append("\n").append("\n");
+        }
+        if (!english.getAntonyms().isEmpty()) {
+            definitionBuilder.append("Antonym: ").append(english.getAntonyms()).append("\n").append("\n");
+        } else {
+            definitionBuilder.append("Antonym: ").append("No antonym found").append("\n").append("\n");
+        }
+        if (!english.getExample().isEmpty()) {
+            definitionBuilder.append("Example: ").append(english.getExample()).append("\n").append("\n");
+        } else {
+            definitionBuilder.append("Example: ").append("No example found").append("\n").append("\n");
+        }
+        return definitionBuilder.toString().trim();
+    }
+
+    public boolean sortedWord() throws SQLException {
+        var x = this.queryBuilder();
+        try {
+            x.orderBy("Word", true);
+        }
+        catch (Exception e){
+            System.err.println(e.getMessage() + " sortedWord");
+            return false;
+        }
+        return true;
+    }
+
     public boolean ifExist(String x) throws SQLException {
         English english = this.queryBuilder().where().eq("Word", x).queryForFirst();
         if(english == null){
@@ -283,8 +326,8 @@ public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
         return false;
     }
     public boolean ifExist(English english)throws SQLException{
-        English english1 =  this.queryBuilder().where().eq("Word", english.getWord()).queryForFirst();
-        if(english1 == null){
+        English englishWord =  this.queryBuilder().where().eq("Word", english.getWord()).queryForFirst();
+        if(englishWord == null){
             return true;
         }
         return false;

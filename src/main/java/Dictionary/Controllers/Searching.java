@@ -7,10 +7,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import static Dictionary.DBConfig.englishDAO;
 
@@ -24,24 +26,36 @@ public class Searching {
         public ObservableList<String> observableWord = FXCollections.observableArrayList();
 
         public Label countRes = new Label("0 kết quả liên quan ");
+        public TextArea wordDefinition = new TextArea();
 
         @FXML
         public void handleSearch(KeyEvent keyEvent) {
             String searchTerm = searchBox.getText();
             if(searchTerm.isEmpty() || searchTerm.isBlank()){
+                wordDefinition.setText("");
                 searchResultsListView.getItems().clear();
                 countRes.setText(String.valueOf(searchResultsListView.getItems().size()) + " Kết quả liên quan");
                 return;
             }
             try {
+                searchResultsListView.getItems().clear();
                 searchTerm = searchTerm.toLowerCase();
                 searchTerm = searchTerm.substring(0, 1).toUpperCase() + searchTerm.substring(1);
-                searchResultsListView.getItems().clear();
-                for (English english : englishDAO.containWord(searchTerm)) {
+                searchTerm = searchTerm.strip();
+                searchTerm = searchTerm.trim();
+                List<English> list = englishDAO.containWord(searchTerm);
+                if(list.isEmpty()){
+                    searchResultsListView.getItems().clear();
+                    countRes.setText(searchResultsListView.getItems().size() + " Kết quả liên quan");
+                    wordDefinition.setText("");
+                    return;
+                }
+                wordDefinition.setText(englishDAO.renderDefinition(list.get(0)));
+                for (English english : list) {
                     System.out.println(english.getWord());
                     searchResultsListView.getItems().add(english.getWord());
-                    countRes.setText(String.valueOf(searchResultsListView.getItems().size()) + " Kết quả liên quan");
                 }
+                countRes.setText(String.valueOf(searchResultsListView.getItems().size()) + " Kết quả liên quan");
             } catch (SQLException e) {
                 e.printStackTrace();
             }

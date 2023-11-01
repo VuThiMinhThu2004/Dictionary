@@ -43,7 +43,7 @@ public class DBConfig {
         TableUtils: create table in db
          */
         TableUtils.createTableIfNotExists(connectionSource, English.class);
-        Data();//nap db
+//        Data();//nap db
         //NormalizeType();
     }
     public static void NormalizeType() throws SQLException {
