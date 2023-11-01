@@ -43,10 +43,19 @@ public class DBConfig {
         TableUtils: create table in db
          */
         TableUtils.createTableIfNotExists(connectionSource, English.class);
-        LoadData();//nap db
+        Data();//nap db
+        //NormalizeType();
+    }
+    public static void NormalizeType() throws SQLException {
+        EnglishDataAccessObject word = new EnglishDataAccessObject();
+
+        var EnglishWords = word.getAllWords();
+        for(var x : EnglishWords){
+            word.changeType(x.getWord());
+        }
     }
 
-    public static void LoadData() throws SQLException {
+    public static void Data() throws SQLException {
         String csvFile = "src/main/resources/englishDictionary.csv";
         List<English> englishList = parseEnglish(csvFile);
         for (English english : englishList) {

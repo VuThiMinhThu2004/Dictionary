@@ -157,6 +157,7 @@ public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
                 }
                 if(english.getType().isEmpty()){
                     english.setType(x.getType());
+                    english.setPronunciation(x.getPronunciation());
                 }else if(!x.getType().isEmpty() && !english.getType().contains(x.getType()) && !Objects.equals(x.getType(), english.getType()))
                     english.setType(english.getType() + "\n" + x.getType());
 
@@ -212,12 +213,66 @@ public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
     }
 
     public List<English> containWord(String word) throws SQLException {//word la mot phan cau tu
-        Where<English, Long> english = this.queryBuilder().where().like("Word", word + "%");
+        Where<English, Long> english = this.queryBuilder().where().like("Word", "%" + word + "%");
         return new ArrayList<>(english.query());
     }
     public List<English> containWord(English english) throws SQLException {
-        Where<English, Long> english1 = this.queryBuilder().where().like("Word", english.getWord() + "%");
+        Where<English, Long> english1 = this.queryBuilder().where().like("Word", "%" + english.getWord() + "%");
         return new ArrayList<>(english1.query());
+    }
+
+    public void changeType(String Word) throws SQLException {
+        var english = this.queryBuilder().where().eq("Word", Word).queryForFirst();
+        if (english != null) {
+            String type = english.getType();
+            if (type.contains("n.")) {
+                type = type.replace("n.", "noun");
+            }
+            if (type.contains("v.")) {
+                type = type.replace("v.", "verb");
+            }
+            if(type.contains("t.")){
+                type = type.replace("t.", "transitive");
+            }
+            if (type.contains("Imp.")) {
+                type = type.replace("Imp", "Imperative");
+            }
+            if (type.contains("a.")) {
+                type = type.replace("a.", "adjective");
+            }
+            if (type.contains("adv.")) {
+                type = type.replace("adv.", "adverb");
+            }
+            if (type.contains("pr.")) {
+                type = type.replace("pr.", "pronoun");
+            }
+            if(type.contains("i.")){
+                type = type.replace("i.", "intransitive");
+            }
+            if(type.contains("pl.")){
+                type = type.replace("pl.", "plural");
+            }
+            if (type.contains("p.")) {
+                type = type.replace("p.", "preposition");
+            }
+            if (type.contains("conj.")) {
+                type = type.replace("conj.", "conjunction");
+            }
+            if (type.contains("interj")) {
+                type = type.replace("interj.", "interjection");
+            }
+            if(type.contains("&")){
+                type = type.replace("&", " and ");
+            }
+            if(type.contains("vb.")){
+                type = type.replace("vb.", "verbNoun");
+            }
+            english.setType(type);
+            this.update(english);
+        }
+    }
+    public List<English> getAllWords() throws SQLException {
+        return this.queryForAll();
     }
 
     public boolean ifExist(String x) throws SQLException {

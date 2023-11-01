@@ -13,7 +13,7 @@ public class MyDictionaryApp extends Application {
         public void start(Stage primaryStage) throws IOException {
             try {
                 // Tải giao diện từ tệp FXML
-                Parent root = FXMLLoader.load(getClass().getResource("/View/SearchUI.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("/View/DicionaryUI.fxml"));
                 Scene scene = new Scene(root);
                 primaryStage.setScene(scene);//Stage là một cửa sổ gốc
                 primaryStage.show();//cửa sổ chính của ứng dụng
