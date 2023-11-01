@@ -1,8 +1,12 @@
 package Dictionary.Models;
 
 import com.j256.ormlite.dao.BaseDaoImpl;
+import com.j256.ormlite.stmt.Where;
 import com.j256.ormlite.support.ConnectionSource;
+
+import java.util.*;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
@@ -146,11 +150,9 @@ public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
         try {
             English english = this.queryBuilder().where().eq("Word", x.getWord()).queryForFirst();
                 if (english != null && !english.getWord().isEmpty()) {
-                if(english.getMeaning().isEmpty()){
+                if(english.getMeaning().isEmpty()) {
                     english.setMeaning(x.getMeaning());
-                }
-                else if(!x.getMeaning().isEmpty() && !english.getMeaning().contains(x.getMeaning()) && !Objects.equals(x.getMeaning().trim().strip(), english.getMeaning()))
-                {
+                } else if (!x.getMeaning().isEmpty() && !english.getMeaning().contains(x.getMeaning()) && !Objects.equals(x.getMeaning().trim().strip(), english.getMeaning())) {
                     english.setMeaning(english.getMeaning() + "\n" + x.getMeaning());
                 }
                 if(english.getType().isEmpty()){
@@ -182,6 +184,42 @@ public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
         }
         return true;
     }
+
+    public boolean deleteWord(String word) throws SQLException {
+        try {
+            Where<English, Long> english = this.queryBuilder().where().eq("Word", word);
+            for (English x : english.query()) {
+                this.delete(x);
+            }
+            return true;
+        } catch (SQLException e) {
+            System.err.println(e.getMessage() + " deleteWord " + word);
+            return false;
+        }
+    }
+
+    public boolean deleteWord(English english) throws SQLException {
+        try {
+            Where<English, Long> english1 = this.queryBuilder().where().eq("Word", english.getWord());
+            for (English x : english1.query()) {
+                this.delete(x);
+            }
+            return true;
+        } catch (SQLException e) {
+            System.err.println(e.getMessage() + " deleteWord " + english.getWord());
+            return false;
+        }
+    }
+
+    public List<English> containWord(String word) throws SQLException {//word la mot phan cau tu
+        Where<English, Long> english = this.queryBuilder().where().like("Word", word + "%");
+        return new ArrayList<>(english.query());
+    }
+    public List<English> containWord(English english) throws SQLException {
+        Where<English, Long> english1 = this.queryBuilder().where().like("Word", english.getWord() + "%");
+        return new ArrayList<>(english1.query());
+    }
+
     public boolean ifExist(String x) throws SQLException {
         English english = this.queryBuilder().where().eq("Word", x).queryForFirst();
         if(english == null){
@@ -197,5 +235,17 @@ public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
         return false;
     }
 
-
+    public List<English> findWord(String word) throws SQLException {
+        Where<English, Long> english = this.queryBuilder().where().eq("Word", word);
+        return new ArrayList<>(english.query());
+    }
+    public List<English> findWord(English english){
+        try {
+            Where<English, Long> english1 = this.queryBuilder().where().eq("Word", english.getWord());
+            return new ArrayList<>(english1.query());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

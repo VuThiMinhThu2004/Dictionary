@@ -10,8 +10,6 @@ import javafx.scene.control.TextArea;
 import java.awt.event.ActionEvent;
 import java.sql.SQLException;
 
-import static Dictionary.DBConfig.*;
-
 public class Addition {
 
     @FXML
