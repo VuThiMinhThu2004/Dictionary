@@ -17,15 +17,14 @@ import javafx.scene.text.Text;
 
 
 public class MyThread implements Runnable {
-    Label ob1,ob2,clock,end,points,question;
+    Label ob1,clock,end,points,question;
     Button bt1,bt2,bt3,bt4,report;
     Text time;
     TextField player;
 
-    public MyThread(Label l1, Label l2, Label l3, Button butt1, Button butt2, Button butt3, Button butt4, Button report, Text t, Label endGame, Label point, TextField player,Label q){
+    public MyThread(Label l1, Label l2, Button butt1, Button butt2, Button butt3, Button butt4, Button report, Text t, Label endGame, Label point, TextField player,Label q){
         ob1 = l1;
-        ob2 = l2;
-        clock = l3;
+        clock = l2;
         bt1 = butt1;
         bt2 = butt2;
         bt3 = butt3;
@@ -57,11 +56,10 @@ public class MyThread implements Runnable {
                     bt3.setDisable(false);
                     bt4.setDisable(false);
                     ob1.setText(FileInput.objectsList1().get(finalI));
-                    ob2.setText(FileInput.objectsList2().get(finalI));
-                    bt1.setText(FileInput.objectsList3().get(finalI));
-                    bt2.setText(FileInput.objectsList4().get(finalI));
-                    bt3.setText(FileInput.objectsList5().get(finalI));
-                    bt4.setText(FileInput.objectsList6().get(finalI));
+                    bt1.setText(FileInput.objectsList2().get(finalI));
+                    bt2.setText(FileInput.objectsList3().get(finalI));
+                    bt3.setText(FileInput.objectsList4().get(finalI));
+                    bt4.setText(FileInput.objectsList5().get(finalI));
                 });
                 Platform.runLater(() -> clock.setText("5"));
                 Thread.sleep(1000);

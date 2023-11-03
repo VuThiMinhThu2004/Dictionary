@@ -33,7 +33,7 @@ public class MainController implements Initializable {
     @FXML
     GridPane gr;
     @FXML
-    Label object1,object2,clock,nameArea,point,end,plus,table,question;
+    Label object1,clock,nameArea,point,end,plus,table,question;
     @FXML
     Text timestamps;
     @FXML
@@ -48,8 +48,8 @@ public class MainController implements Initializable {
     static ObservableList<Player> listSorted;
     static Stack<String> timeStack = new Stack<>();
     static int j = 0;
-    static int k=1;
-    public static boolean isTheAnswer(String sss, ArrayList<String> someList){
+    static int k = 1;
+    public static boolean isTheAnswer(String sss, ArrayList<String> someList) {
         boolean answer = false;
         for(String w : someList){
             if (sss.equals(w)) {
@@ -82,7 +82,7 @@ public class MainController implements Initializable {
     public void startThread(){
         nameArea.setText("Player: " + player.getText());
         player.setDisable(true);
-        MyThread th = new MyThread(object1,object2,clock,choice1,choice2,choice3,choice4,generateReport,timestamps,end,point,player,question);
+        MyThread th = new MyThread(object1,clock,choice1,choice2,choice3,choice4,generateReport,timestamps,end,point,player,question);
         Thread t1 = new Thread(th);
         t1.start();
     }
@@ -92,7 +92,6 @@ public class MainController implements Initializable {
     public void showResults() throws FileNotFoundException {
         playerTable.setVisible(true);
         object1.setVisible(false);
-        object2.setVisible(false);
         plus.setVisible(false);
         question.setVisible(false);
         end.setVisible(false);
@@ -146,7 +145,6 @@ public class MainController implements Initializable {
             timeStack.push(temp);
         }
         k++;
-
     }
 
     @Override
