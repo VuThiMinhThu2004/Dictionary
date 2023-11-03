@@ -14,20 +14,19 @@ public class FileInput {
     static ArrayList<String> thirdSet = new ArrayList<>();
     static ArrayList<String> fourthSet = new ArrayList<>();
     static ArrayList<String> fifthSet = new ArrayList<>();
-    static ArrayList<String> sixthSet = new ArrayList<>();
     static ArrayList<String> results = new ArrayList<>();
-    static String object1,object2,answer1,answer2,answer3,answer4;
+    static String object1,answer1,answer2,answer3,answer4;
     public static ArrayList<String> answers() {
-        results.add("responsibility");
-        results.add("the");
-        results.add("suitable");
-        results.add("special dishes");
-        results.add("became");
-        results.add("arrived / discovered / was preparing");
-        results.add("under");
-        results.add("mysterious");
-        results.add("interested in");
-        results.add("determined");
+        results.add("B. responsibility");
+        results.add("C. the");
+        results.add("C. suitable ");
+        results.add("D. special dishes");
+        results.add("C. became");
+        results.add("D. arrived / discovered / was preparing");
+        results.add("A. under");
+        results.add("B. mysterious");
+        results.add("A. interested in");
+        results.add("C. determined");
         return results;
     }
 
@@ -36,12 +35,21 @@ public class FileInput {
         try {
             File file = new File("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\input.txt");
             Scanner scan = new Scanner(file);
-            for(int i = 0; i < 10; i++) {
-                object1 = scan.next();
+            while (scan.hasNextLine()) {
+                object1 = scan.nextLine();
                 firstSet.add(object1);
-                scan.next();
-                scan.nextLine();
-                scan.nextLine();
+
+                answer1 = scan.nextLine();
+                secondSet.add(answer1);
+
+                answer2 = scan.nextLine();
+                thirdSet.add(answer2);
+
+                answer3 = scan.nextLine();
+                fourthSet.add(answer3);
+
+                answer4 = scan.nextLine();
+                fifthSet.add(answer4);
             }
             scan.close();
         } catch (FileNotFoundException e) {
@@ -51,92 +59,15 @@ public class FileInput {
     }
 
     public static ArrayList<String> objectsList2() {
-        try {
-            File file = new File("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\input.txt");
-            Scanner scan = new Scanner(file);
-            for(int i = 0; i < 10; i++) {
-                scan.next();
-                object2 = scan.next();
-                secondSet.add(object2);
-                scan.next();
-                scan.nextLine();
-
-            }
-            scan.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
         return secondSet;
     }
     public static ArrayList<String> objectsList3() {
-        try {
-            File file = new File("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\input.txt");
-            Scanner scan = new Scanner(file);
-            for(int i = 0; i < 10; i++) {
-                scan.nextLine();
-                answer1 = scan.next();
-                thirdSet.add(answer1);
-                scan.nextLine();
-            }
-            scan.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
         return thirdSet;
     }
     public static ArrayList<String> objectsList4() {
-        try {
-            File file = new File("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\input.txt");
-            Scanner scan = new Scanner(file);
-            for(int i = 0; i < 10; i++) {
-                scan.nextLine();
-                scan.next();
-                answer2 = scan.next();
-                fourthSet.add(answer2);
-                scan.nextLine();
-            }
-            scan.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
         return fourthSet;
     }
     public static ArrayList<String> objectsList5() {
-        try {
-            File file = new File("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\input.txt");
-            Scanner scan = new Scanner(file);
-            for(int i = 0; i < 10; i++) {
-                scan.nextLine();
-                scan.next();
-                scan.next();
-                answer3 = scan.next();
-                fifthSet.add(answer3);
-                scan.nextLine();
-            }
-            scan.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
         return fifthSet;
     }
-    public static ArrayList<String> objectsList6() {
-        try {
-            File file = new File("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\input.txt");
-            Scanner scan = new Scanner(file);
-            for(int i = 0; i < 10; i++) {
-                scan.nextLine();
-                scan.next();
-                scan.next();
-                scan.next();
-                answer4 = scan.next();
-                sixthSet.add(answer4);
-                scan.nextLine();
-            }
-            scan.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        return sixthSet;
-    }
-
 }
