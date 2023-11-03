@@ -1,7 +1,4 @@
 package Dictionary.QuizGame;
-
-
-
 /** FileInput class that reads data from the given txt.file and process
  them into 6 ArrayLists(2 lists for questions and 4 Lists for possible answers).
  */
@@ -21,23 +18,23 @@ public class FileInput {
     static ArrayList<String> results = new ArrayList<>();
     static String object1,object2,answer1,answer2,answer3,answer4;
     public static ArrayList<String> answers() {
-        results.add("9.0");
-        results.add("9.0");
-        results.add("MickeyMouse");
-        results.add("ca");
-        results.add("16");
-        results.add("8.1f");
-        results.add("JavaProgram");
-        results.add("6.3f");
-        results.add("MaryLamb");
-        results.add("11");
+        results.add("responsibility");
+        results.add("the");
+        results.add("suitable");
+        results.add("special dishes");
+        results.add("became");
+        results.add("arrived / discovered / was preparing");
+        results.add("under");
+        results.add("mysterious");
+        results.add("interested in");
+        results.add("determined");
         return results;
     }
 
 
     public static ArrayList<String> objectsList1() {
         try {
-            File file = new File("C:\\input.txt");
+            File file = new File("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\input.txt");
             Scanner scan = new Scanner(file);
             for(int i = 0; i < 10; i++) {
                 object1 = scan.next();
@@ -55,7 +52,7 @@ public class FileInput {
 
     public static ArrayList<String> objectsList2() {
         try {
-            File file = new File("C:\\input.txt");
+            File file = new File("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\input.txt");
             Scanner scan = new Scanner(file);
             for(int i = 0; i < 10; i++) {
                 scan.next();
@@ -73,7 +70,7 @@ public class FileInput {
     }
     public static ArrayList<String> objectsList3() {
         try {
-            File file = new File("C:\\input.txt");
+            File file = new File("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\input.txt");
             Scanner scan = new Scanner(file);
             for(int i = 0; i < 10; i++) {
                 scan.nextLine();
@@ -89,7 +86,7 @@ public class FileInput {
     }
     public static ArrayList<String> objectsList4() {
         try {
-            File file = new File("C:\\input.txt");
+            File file = new File("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\input.txt");
             Scanner scan = new Scanner(file);
             for(int i = 0; i < 10; i++) {
                 scan.nextLine();
@@ -106,7 +103,7 @@ public class FileInput {
     }
     public static ArrayList<String> objectsList5() {
         try {
-            File file = new File("C:\\input.txt");
+            File file = new File("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\input.txt");
             Scanner scan = new Scanner(file);
             for(int i = 0; i < 10; i++) {
                 scan.nextLine();
@@ -124,7 +121,7 @@ public class FileInput {
     }
     public static ArrayList<String> objectsList6() {
         try {
-            File file = new File("C:\\input.txt");
+            File file = new File("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\input.txt");
             Scanner scan = new Scanner(file);
             for(int i = 0; i < 10; i++) {
                 scan.nextLine();

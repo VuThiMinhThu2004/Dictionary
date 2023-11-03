@@ -89,7 +89,8 @@ public class MyThread implements Runnable {
             e.printStackTrace();
         }
         catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            //throw new RuntimeException(e);
         }
         Platform.runLater(() -> {
             String current = "";

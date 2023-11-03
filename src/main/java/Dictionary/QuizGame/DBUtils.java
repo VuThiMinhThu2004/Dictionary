@@ -19,9 +19,9 @@ public class DBUtils {
             throw new RuntimeException(e);
         }
         try{
-            Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/ADD DATABASE", "ADD USERNAME", "ADD PASSWORD");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/quizuser", "root", "");
             PreparedStatement pStat = null;
-            pStat = conn.prepareStatement("INSERT INTO `players`(player_name,score) VALUES(?,?)");
+            pStat = conn.prepareStatement("INSERT INTO `players`(name,score) VALUES(?,?)");
             pStat.setString(1, name);
             pStat.setInt(2, points);
             pStat.executeUpdate();
@@ -42,12 +42,12 @@ public class DBUtils {
             throw new RuntimeException(e);
         }
         try{
-            Connection conn = DriverManager.getConnection ("jdbc:mysql://127.0.0.1:3306/ADD DATABASE", "ADD USERNAME", "ADD PASSWORD");
+            Connection conn = DriverManager.getConnection ("jdbc:mysql://127.0.0.1:3306/quizuser", "root", "");
             list = FXCollections.observableArrayList();
             PreparedStatement ps = conn.prepareStatement("SELECT * FROM players");
             ResultSet rs = ps.executeQuery();
             while (rs.next()){
-                list.add(new Player(rs.getString("player_name"),rs.getInt("score")));
+                list.add(new Player(rs.getString("name"),rs.getInt("score")));
             }
         }
         catch(SQLException e){
