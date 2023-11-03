@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
+
 <Pane minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="688.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.QuizGame.MainController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -49,7 +50,7 @@
         <Label fx:id="object2" prefHeight="58.0" prefWidth="139.0" style="-fx-font-family: VERDANA; -fx-font-weight: BOLD; -fx-font-size: 22;" text="    Object 2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
         <Label fx:id="end" alignment="CENTER" prefHeight="67.0" prefWidth="200.0" style="-fx-font-family: VERDANA; -fx-font-weight: BOLD; -fx-font-size: 20; -fx-text-fill: red;" text="Game Over !" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES" />
     </GridPane>
-    <VBox fx:id="start" layoutX="609.0" prefHeight="419.0" prefWidth="200.0" style="-fx-font-family: DAYTONA; -fx-font-weight: BOLD; -fx-font-size: 10; -fx-background-color: lightgray; -fx-text-fill: black;">
+    <VBox fx:id="start" layoutX="609.0" prefHeight="419.0" prefWidth="200.0" style="-fx-font-family: DAYTONA; -fx-font-weight: BOLD; -fx-font-size: 10; -fx-background-color: lightGray; -fx-text-fill: black;">
         <Text fx:id="timestamps" style="-fx-font-family: DAYTONA; -fx-font-weight: BOLD; -fx-font-size: 16; -fx-background-color: #2196f3; -fx-text-fill: white;" />
     </VBox>
     <GridPane fx:id="gr" layoutX="14.0" layoutY="480.0" prefHeight="47.0" prefWidth="587.0">

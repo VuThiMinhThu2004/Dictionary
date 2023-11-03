@@ -21,7 +21,7 @@ module com.example.dictionary {
 
     exports Dictionary.QuizGame;
 
-
+    opens Dictionary.QuizGame;
     exports Dictionary.Controllers to javafx.fxml;
 
 }
