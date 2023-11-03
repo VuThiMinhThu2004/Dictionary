@@ -269,8 +269,9 @@ public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
             this.update(english);
         }
     }
-    public List<English> getAllWords() throws SQLException {
-        return this.queryForAll();
+    public static List<English> getAllWords() throws SQLException {
+        List<English> x = new ArrayList<>();
+              return x;
     }
 
     public String renderDefinition(English english) {
@@ -346,4 +347,6 @@ public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
         }
         return null;
     }
+
+
 }
