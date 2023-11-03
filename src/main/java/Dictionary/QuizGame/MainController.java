@@ -59,22 +59,17 @@ public class MainController implements Initializable {
         }
         return answer;
     }
+
     @FXML
     public void checkResult1(){
         setAnswer(choice1);
     }
     @FXML
-    public void checkResult2(){
-        setAnswer(choice2);
-    }
+    public void checkResult2(){ setAnswer(choice2); }
     @FXML
-    public void checkResult3(){
-        setAnswer(choice3);
-    }
+    public void checkResult3() { setAnswer(choice3); }
     @FXML
-    public void checkResult4(){
-        setAnswer(choice4);
-    }
+    public void checkResult4() { setAnswer(choice4); }
 
     /** Method that starts the Thread */
 
@@ -92,7 +87,6 @@ public class MainController implements Initializable {
     public void showResults() throws FileNotFoundException {
         playerTable.setVisible(true);
         object1.setVisible(false);
-        plus.setVisible(false);
         question.setVisible(false);
         end.setVisible(false);
         choice1.setVisible(false);
@@ -115,7 +109,7 @@ public class MainController implements Initializable {
         }
         playerTable.setItems(listSorted);
 
-        FileOutputStream fs = new FileOutputStream("C:\\output.txt");
+        FileOutputStream fs = new FileOutputStream("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\output.txt");
         PrintWriter pw = new PrintWriter(fs);
         pw.println(listSorted);
         pw.close();
