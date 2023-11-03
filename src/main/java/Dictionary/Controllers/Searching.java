@@ -3,13 +3,23 @@ package Dictionary.Controllers;
 import Dictionary.Models.English;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
+import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.event.ActionEvent;
+import javax.swing.*;
+import java.net.URL;
+import java.security.PublicKey;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.ResourceBundle;
+
+import Utils.VoiceManager;
 
 import java.sql.SQLException;
 import java.util.List;

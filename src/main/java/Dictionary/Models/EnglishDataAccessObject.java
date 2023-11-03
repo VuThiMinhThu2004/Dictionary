@@ -9,6 +9,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Objects;
 
+
+
 public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
 
     public EnglishDataAccessObject() throws SQLException {
