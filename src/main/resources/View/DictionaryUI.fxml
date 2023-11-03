@@ -8,60 +8,104 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="636.0" prefWidth="962.0" styleClass="root" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.Dictionary">
-    <children>
-        <AnchorPane fx:id="container" layoutX="14.0" layoutY="14.0" prefHeight="605.0" prefWidth="833.0" styleClass="definition-wrapper" stylesheets="@../Style/Style.css" />
-        <Button fx:id="searchBtn" layoutX="848.0" layoutY="202.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="body" stylesheets="@../Style/Style.css" text="Search">
-            <tooltip>
-                <Tooltip fx:id="tooltip1" text="Search" />
-            </tooltip>
-            <font>
-                <Font name="System Bold" size="18.0" />
-            </font>
-        </Button>
-        <Button fx:id="addBtn" layoutX="849.0" layoutY="268.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" styleClass="body" stylesheets="@../Style/Style.css" text="Add">
-            <font>
-                <Font name="System Bold" size="18.0" />
-            </font>
-            <tooltip>
-                <Tooltip fx:id="tooltip2" text="Add" />
-            </tooltip>
-        </Button>
-        <Button fx:id="translateBtn" layoutX="849.0" layoutY="336.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" styleClass="body" stylesheets="@../Style/Style.css" text="Translate">
-            <font>
-                <Font name="System Bold" size="18.0" />
-            </font>
-            <tooltip>
-                <Tooltip fx:id="tooltip3" text="Translate" />
-            </tooltip>
-        </Button>
-        <Button fx:id="exitBtn" layoutX="876.0" layoutY="558.0" mnemonicParsing="false" styleClass="body" stylesheets="@../Style/Style.css" text="Exit">
-            <font>
-                <Font name="System Bold" size="18.0" />
-            </font>
-            <tooltip>
-                <Tooltip fx:id="tooltip4" text="Exit" />
-            </tooltip>
-        </Button>
-      <Button fx:id="attachBtn" layoutX="848.0" layoutY="405.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="body" stylesheets="@../Style/Style.css" text="Attach">
-         <tooltip>
-            <Tooltip fx:id="tooltip5" text="Search" />
-         </tooltip>
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Button>
-      <Button fx:id="quizBtn" layoutX="848.0" layoutY="138.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="body" stylesheets="@../Style/Style.css" text="Quiz">
-         <tooltip>
-            <Tooltip fx:id="tooltip6" text="Search" />
-         </tooltip>
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="56.0" fitWidth="56.0" layoutX="873.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Icons/icons8_google_translate_48px.png" />
-         </image>
-      </ImageView>
-    </children>
+    <AnchorPane fx:id="container" layoutX="14.0" layoutY="14.0" prefHeight="605.0" prefWidth="833.0" styleClass="border" />
+    <Button fx:id="searchBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="848.0" layoutY="215.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" text="Search">
+        <tooltip>
+            <Tooltip fx:id="tooltip1" text="Search" />
+        </tooltip>
+        <font>
+            <Font name="System Bold" size="15.0" />
+        </font>
+      <graphic>
+         <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../Icons/icons8_search_64px.png" />
+            </image>
+         </ImageView>
+      </graphic>
+    </Button>
+    <Button fx:id="addBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="848.0" layoutY="266.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" text="Add">
+        <font>
+            <Font name="System Bold" size="15.0" />
+        </font>
+        <tooltip>
+            <Tooltip fx:id="tooltip2" text="Add" />
+        </tooltip>
+      <graphic>
+         <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../Icons/icons8_add_64px.png" />
+            </image>
+         </ImageView>
+      </graphic>
+    </Button>
+    <Button fx:id="translateBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="848.0" layoutY="318.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" text="Translate">
+        <font>
+            <Font name="System Bold" size="15.0" />
+        </font>
+        <tooltip>
+            <Tooltip fx:id="tooltip3" text="Translate" />
+        </tooltip>
+      <graphic>
+         <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../Icons/icons8_google_translate_64px.png" />
+            </image>
+         </ImageView>
+      </graphic>
+    </Button>
+    <Button fx:id="exitBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="848.0" layoutY="555.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" text="Exit">
+        <font>
+            <Font name="System Bold" size="15.0" />
+        </font>
+        <tooltip>
+            <Tooltip fx:id="tooltip4" text="Exit" />
+        </tooltip>
+      <graphic>
+         <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../Images/icons8-exit-64.png" />
+            </image>
+         </ImageView>
+      </graphic>
+    </Button>
+    <Button fx:id="attachBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="848.0" layoutY="368.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" text="Attach">
+        <tooltip>
+            <Tooltip fx:id="tooltip5" text="Attachment" />
+        </tooltip>
+        <font>
+            <Font name="System Bold" size="15.0" />
+        </font>
+      <graphic>
+         <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../Images/icons8-attach-64.png" />
+            </image>
+         </ImageView>
+      </graphic>
+    </Button>
+    <Button fx:id="quizBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="848.0" layoutY="164.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" text="Quiz">
+        <tooltip>
+            <Tooltip fx:id="tooltip6" text="Quiz">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Tooltip>
+        </tooltip>
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+      <graphic>
+         <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../Images/icons8-quiz-64.png" />
+            </image>
+         </ImageView>
+      </graphic>
+    </Button>
+   <ImageView fitHeight="83.0" fitWidth="90.0" layoutX="864.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../Images/icons8-dictionary-64.png" />
+      </image>
+   </ImageView>
 </AnchorPane>
