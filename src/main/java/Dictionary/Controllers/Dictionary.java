@@ -24,6 +24,8 @@ public class Dictionary implements Initializable {
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         searchBtn.setTooltip(tooltip1);
+        addBtn.setTooltip(tooltip2);
+        translateBtn.setTooltip(tooltip3);
         searchBtn.setOnAction(event -> showComponent("/View/SearchingUI.fxml"));
 
         addBtn.setOnAction(event -> showComponent("/View/AdditionUI.fxml"));
@@ -43,8 +45,6 @@ public class Dictionary implements Initializable {
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
-
-
         exitBtn.setOnMouseClicked(e -> System.exit(0));
     }
 
