@@ -13,6 +13,9 @@ module com.example.dictionary {
 
 
     requires javafx.graphics;
+    requires httpclient;
+    requires httpcore;
+    requires json;
 
     opens com.example.dictionary to javafx.fxml;
     exports com.example.dictionary;

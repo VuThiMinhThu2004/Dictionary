@@ -1,6 +1,5 @@
 package Dictionary.Services;
 
-
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.FactoryRegistry;
 import javazoom.jl.player.advanced.AdvancedPlayer;
@@ -78,4 +77,3 @@ public class VoiceService {
         } );
     }
 }
-
