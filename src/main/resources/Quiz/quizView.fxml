@@ -11,9 +11,7 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.QuizGame.MainController">
     <padding>
@@ -22,9 +20,9 @@
 
     <GridPane alignment="CENTER" layoutX="8.0" layoutY="11.0" prefHeight="426.0" prefWidth="950.0">
         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="903.1999877929687" minWidth="10.0" prefWidth="727.8" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="609.5999633789062" minWidth="10.0" prefWidth="111.79999999999995" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="777.6000366210938" minWidth="10.0" prefWidth="120.80002441406248" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="903.1999877929687" minWidth="10.0" prefWidth="771.8000122070314" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="609.5999633789062" minWidth="10.0" prefWidth="97.60003662109375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="777.6000366210938" minWidth="10.0" prefWidth="82.39996337890625" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints />
@@ -48,8 +46,8 @@
                     </effect>
                 </TableView>
             </graphic></Label>
-        <Label fx:id="table" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="16.0" layoutY="14.0" prefHeight="90.0" prefWidth="106.0" style="-fx-font-family: VERDANA; -fx-font-weight: bold; -fx-font-size: 22;" text="Points :" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
-        <Label fx:id="point" alignment="TOP_CENTER" prefHeight="40.0" prefWidth="100.0" style="-fx-font-family: VERDANA; -fx-font-weight: BOLD; -fx-font-size: 60;" text="0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+        <Label fx:id="table" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="16.0" layoutY="14.0" prefHeight="90.0" prefWidth="133.0" style="-fx-font-family: VERDANA; -fx-font-weight: bold; -fx-font-size: 22;" text="Points :" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+        <Label fx:id="point" alignment="TOP_CENTER" prefHeight="40.0" prefWidth="100.0" style="-fx-font-family: VERDANA; -fx-font-weight: BOLD; -fx-font-size: 60;" text="0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
          <font>
             <Font size="5.0" />
          </font></Label>
@@ -59,10 +57,11 @@
             <Font name="Arial Bold Italic" size="40.0" />
          </font></Label>
        <Label fx:id="question" prefHeight="35.0" prefWidth="200.0" style="-fx-font-family: VERDANA; -fx-font-weight: bold; -fx-font-size: 20;" text="Question " GridPane.rowIndex="2" />
+       <AnchorPane prefHeight="199.0" prefWidth="207.0" GridPane.rowIndex="1">
+           <Label fx:id="clock" alignment="CENTER" ellipsisString=":" layoutX="35.0" layoutY="36.0" prefHeight="143.0" prefWidth="144.0" style="-fx-font-family: VERDANA; -fx-font-weight: BOLD; -fx-font-size: 100;" text="5" />
+           <Label alignment="CENTER" layoutX="16.0" layoutY="14.0" prefHeight="41.0" prefWidth="185.0" style="-fx-font-family: DAYTONA; -fx-font-weight: bold; -fx-font-size: 17;" text="Countdown Clock" />
+       </AnchorPane>
     </GridPane>
-    <VBox fx:id="start" layoutX="743.0" layoutY="110.0" prefHeight="419.0" prefWidth="200.0" style="-fx-font-family: DAYTONA; -fx-font-weight: BOLD; -fx-font-size: 10; -fx-background-color: laygray; -fx-text-fill: black;">
-        <Text fx:id="timestamps" style="-fx-font-family: DAYTONA; -fx-font-weight: BOLD; -fx-font-size: 16; -fx-background-color: #2196f3; -fx-text-fill: white;" />
-    </VBox>
     <GridPane fx:id="gr" layoutX="30.0" layoutY="457.0" prefHeight="44.0" prefWidth="600.0">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -83,10 +82,6 @@
         </rowConstraints>
         <Button fx:id="generateReport" mnemonicParsing="false" onAction="#showResults" prefHeight="60.0" prefWidth="200.0" style="-fx-font-family: DAYTONA; -fx-font-weight: BOLD; -fx-font-size: 20; -fx-background-color:#2196f3; -fx-text-fill: white;" text="Generate Report" GridPane.halignment="CENTER" />
     </GridPane>
-    <AnchorPane layoutX="792.0" layoutY="562.0" prefHeight="199.0" prefWidth="207.0">
-        <Label fx:id="clock" alignment="CENTER" ellipsisString=":" layoutX="35.0" layoutY="36.0" prefHeight="143.0" prefWidth="144.0" style="-fx-font-family: VERDANA; -fx-font-weight: BOLD; -fx-font-size: 100;" text="5" />
-        <Label alignment="CENTER" layoutX="16.0" layoutY="14.0" prefHeight="41.0" prefWidth="185.0" style="-fx-font-family: DAYTONA; -fx-font-weight: bold; -fx-font-size: 17;" text="Countdown Clock" />
-    </AnchorPane>
     <AnchorPane layoutX="200.0" layoutY="600.0" prefHeight="35.0" prefWidth="500.0">
         <TextField fx:id="player" onAction="#startThread" prefHeight="41.0" prefWidth="509.0" promptText="Insert your name and press &lt;Enter&gt;" style="-fx-font-size: 20; -fx-font-family: VERDANA;" />
     </AnchorPane>

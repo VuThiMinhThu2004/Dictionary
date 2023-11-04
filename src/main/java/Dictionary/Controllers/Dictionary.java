@@ -16,9 +16,9 @@ import java.util.ResourceBundle;
 
 public class Dictionary implements Initializable {
     @FXML
-    public Tooltip tooltip1, tooltip2, tooltip3, tooltip4, tooltip5, tooltip6;
+    public Tooltip tooltip1, tooltip2, tooltip3, tooltip4, tooltip5, tooltip6, tooltip7;
     @FXML
-    public Button addBtn, translateBtn, searchBtn, attachBtn, exitBtn, quizBtn;
+    public Button addBtn, translateBtn, searchBtn, attachBtn, exitBtn, quizBtn, hangmanBtn;
     @FXML
     public AnchorPane container;
 
@@ -30,7 +30,9 @@ public class Dictionary implements Initializable {
         addBtn.setOnAction(event -> showComponent("/View/AdditionUI.fxml"));
         translateBtn.setOnAction(event -> showComponent("/View/TranslationUI.fxml"));
         attachBtn.setOnAction(event -> showComponent("/View/ImageTranslateUI.fxml"));
-        quizBtn.setOnAction(event -> showComponent("/Quiz/temp.fxml"));
+        quizBtn.setOnAction(event -> showComponent("/Quiz/quizView.fxml"));
+        hangmanBtn.setOnAction(event -> showComponent("/Quiz/hangman.fxml"));
+
 
         tooltip1.setShowDelay(Duration.seconds(0.1));
         tooltip2.setShowDelay(Duration.seconds(0.1));
@@ -38,6 +40,8 @@ public class Dictionary implements Initializable {
         tooltip4.setShowDelay(Duration.seconds(0.1));
         tooltip5.setShowDelay(Duration.seconds(0.1));
         tooltip6.setShowDelay(Duration.seconds(0.1));
+        tooltip7.setShowDelay(Duration.seconds(0.1));
+
 
         try {
             showComponent("/View/SearchingUI.fxml");

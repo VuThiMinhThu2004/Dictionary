@@ -147,7 +147,6 @@ public class MainController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         end.setVisible(false);
         generateReport.setDisable(true);
-        timestamps.setText("");
         player.setEditable(true);
         player.requestFocus();
         playerTable.setVisible(false);

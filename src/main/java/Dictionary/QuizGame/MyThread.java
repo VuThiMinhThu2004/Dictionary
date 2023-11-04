@@ -19,7 +19,6 @@ import javafx.scene.text.Text;
 public class MyThread implements Runnable {
     Label ob1,clock,end,points,question;
     Button bt1,bt2,bt3,bt4,report;
-    Text time;
     TextField player;
 
     public MyThread(Label l1, Label l2, Button butt1, Button butt2, Button butt3, Button butt4, Button report, Text t, Label endGame, Label point, TextField player,Label q){
@@ -30,7 +29,6 @@ public class MyThread implements Runnable {
         bt3 = butt3;
         bt4 = butt4;
         this.report = report;
-        time = t;
         end = endGame;
         points = point;
         this.player = player;
@@ -39,7 +37,6 @@ public class MyThread implements Runnable {
     /** Run Method that
      * changes questions and answers
      * moves countdown clock
-     * adds timestamps
      * stores players and theirs scores into a MySQL database
      */
 
@@ -72,14 +69,14 @@ public class MyThread implements Runnable {
 //                Thread.sleep(1000);
 //                Platform.runLater(() -> clock.setText("6"));
 //                Thread.sleep(1000);
-//                Platform.runLater(() -> clock.setText("5"));
-//                Thread.sleep(1000);
-//                Platform.runLater(() -> clock.setText("4"));
-//                Thread.sleep(1000);
-//                Platform.runLater(() -> clock.setText("3"));
-//                Thread.sleep(1000);
-//                Platform.runLater(() -> clock.setText("2"));
-//                Thread.sleep(1000);
+                Platform.runLater(() -> clock.setText("5"));
+                Thread.sleep(1000);
+                Platform.runLater(() -> clock.setText("4"));
+                Thread.sleep(1000);
+                Platform.runLater(() -> clock.setText("3"));
+                Thread.sleep(1000);
+                Platform.runLater(() -> clock.setText("2"));
+                Thread.sleep(1000);
                 Platform.runLater(() -> clock.setText("1"));
                 Thread.sleep(1000);
                 Platform.runLater(() -> {
@@ -101,11 +98,5 @@ public class MyThread implements Runnable {
             e.printStackTrace();
             //throw new RuntimeException(e);
         }
-        Platform.runLater(() -> {
-            String current = "";
-            while(!MainController.timeStack.isEmpty()){
-                current += MainController.timeStack.pop() + "\n";
-            }
-            time.setText(current);});
     }
 }
