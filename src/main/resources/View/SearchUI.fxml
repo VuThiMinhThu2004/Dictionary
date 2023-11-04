@@ -96,7 +96,7 @@
                                         </Label>
                                         <Button layoutX="404.0" layoutY="-1.0" mnemonicParsing="false" onAction="#speakWord" prefHeight="50.0" prefWidth="50.0" styleClass="transparent-button" wrapText="true">
                                             <tooltip>
-                                                <Tooltip text="Phonetic" />
+                                                <Tooltip fx:id="tooltip1" text="Phonetic" />
                                             </tooltip>
                                             <graphic>
                                                 <ImageView fitHeight="42.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
@@ -107,7 +107,7 @@
                                             </graphic></Button>
                                         <Button layoutX="333.0" mnemonicParsing="false" onAction="#deleteWord" prefHeight="50.0" prefWidth="50.0" styleClass="transparent-button" wrapText="true">
                                             <tooltip>
-                                                <Tooltip text="Delete Word" />
+                                                <Tooltip fx:id="tooltip2" text="Delete Word" />
                                             </tooltip>
                                             <graphic>
                                                 <ImageView fitHeight="40.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
@@ -118,7 +118,7 @@
                                             </graphic></Button>
                                         <Button layoutX="255.0" layoutY="1.0" mnemonicParsing="false" onAction="#updateWord" prefHeight="50.0" prefWidth="50.0" styleClass="transparent-button" wrapText="true">
                                             <tooltip>
-                                                <Tooltip text="Update Word" />
+                                                <Tooltip fx:id="tooltip3" text="Update Word" />
                                             </tooltip>
                                             <graphic>
                                                 <ImageView fitHeight="43.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">

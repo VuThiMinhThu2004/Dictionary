@@ -30,7 +30,7 @@ public class Dictionary implements Initializable {
 
         translateBtn.setOnAction(event -> showComponent("/View/TranslationUI.fxml"));
         attachBtn.setOnAction(event -> showComponent("/View/ImageTranslateUI.fxml"));
-        quizBtn.setOnAction(event -> showComponent("/View/QuizUI.fxml"));
+        quizBtn.setOnAction(event -> showComponent("/Quiz/quizView.fxml"));
 
         tooltip1.setShowDelay(Duration.seconds(0.1));
         tooltip2.setShowDelay(Duration.seconds(0.1));
@@ -38,11 +38,13 @@ public class Dictionary implements Initializable {
         tooltip4.setShowDelay(Duration.seconds(0.1));
         tooltip5.setShowDelay(Duration.seconds(0.1));
         tooltip6.setShowDelay(Duration.seconds(0.1));
+
         try {
             showComponent("/View/SearchingUI.fxml");
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
+
 
 
         exitBtn.setOnMouseClicked(e -> System.exit(0));
