@@ -10,6 +10,8 @@ module com.example.dictionary {
     requires java.scripting;
     requires jlayer;
 
+
+
     requires javafx.graphics;
 
     opens com.example.dictionary to javafx.fxml;
@@ -19,6 +21,8 @@ module com.example.dictionary {
     opens Dictionary.Controllers;
 
     exports Dictionary.QuizGame;
+
+    exports Dictionary to javafx.graphics;
 
     opens Dictionary.QuizGame;
     exports Dictionary.Controllers to javafx.fxml;

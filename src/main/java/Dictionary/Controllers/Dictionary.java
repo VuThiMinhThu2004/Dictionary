@@ -1,6 +1,5 @@
 package Dictionary.Controllers;
 
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
