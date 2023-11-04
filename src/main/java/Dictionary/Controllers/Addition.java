@@ -1,94 +1,120 @@
 package Dictionary.Controllers;
 
+import Dictionary.Alerts.AlertStyler;
 import Dictionary.Models.English;
-import Dictionary.Models.EnglishDataAccessObject;
+import Dictionary.Services.StringUtils;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 
-import java.awt.event.ActionEvent;
 import java.sql.SQLException;
+
+import static Dictionary.MyDictionaryApp.AppStage;
+import static Dictionary.DBConfig.englishDAO;
 
 public class Addition {
 
     @FXML
-    private TextArea exampleTextArea;
+    private TextArea Ex; // example
 
     @FXML
-    private Button addButton;
+    private Button addBtn;
 
     @FXML
-    private TextArea newWord;
+    private TextArea Nw; // new word
 
     @FXML
-    private TextArea meaning;
+    private TextArea Pos; // part of speech
     @FXML
-    private TextArea pronunciation;
+    private TextArea Mn; // meaning
     @FXML
-    private TextArea synonym;
-
+    private TextArea Pro; // pronunciation
     @FXML
-    private TextArea antonym;
+    private TextArea Sy; // synonym
+    @FXML
+    private TextArea An; // antonym
 
-    private TextArea partOfSpeech;
-
-    public void resetText() {// xóa nội dung văn bản của một số trường TextArea.
-        exampleTextArea.setText("");
-        meaning.setText("");
-        pronunciation.setText("");
-        synonym.setText("");
-        antonym.setText("");
-        partOfSpeech.setText("");
+    public void resetText() {
+        Ex.setText("");
+        Pos.setText("");
+        Mn.setText("");
+        Pro.setText("");
+        Sy.setText("");
+        An.setText("");
     }
 
-    public void handleAdd()  {//ấy thông tin về một từ từ cơ sở dữ liệu
-        String word = newWord.getText();
+    public void handleAdd() throws SQLException {
+        String word = Nw.getText();
         if (word.isEmpty() || word.isBlank()) {
             resetText();
             return;
         }
-    }
-
-
-    @FXML
-    protected void HandleClickBtn(ActionEvent event) throws SQLException {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
-        String word = newWord.getText();
-        String ex = exampleTextArea.getText();
-        String mn = meaning.getText();
-        String pro = pronunciation.getText();
-        String sy = synonym.getText();
-        String an = antonym.getText();
-        String posSpeech = partOfSpeech.getText();
-
-        if(word.isEmpty() || word.isBlank()){
-            alert.setHeaderText("Adding word failed");
-            alert.setContentText("Word cannot be empty, please try again");
-            alert.showAndWait();
-        } else if (word.trim().isEmpty() || mn.trim().isEmpty()) {
-            alert.setHeaderText("Adding word failed");
-            alert.setContentText("Meaning cannot be empty, please try again");
-            alert.showAndWait();
-        } else{
-            // Thêm từ mới vào cơ sở dữ liệu ở đây (với đoạn mã đã có)
-            English english = new English(word, mn, pro, posSpeech, ex, sy, an);
-            EnglishDataAccessObject hehe = new EnglishDataAccessObject();
-            if(!hehe.updateWord(english)){
-                return;
-            }
-            alert.setTitle("App Dictionary");
-            alert.setHeaderText("Adding word successfully");
-            alert.setContentText("New Word: " + word + "\nExplaination: "
-                    + ex + "\nPart of speech :" + "Part of speech: " + posSpeech
-                    + "\nSynonym: " + sy + "\nAnonym: "+ an);
-            alert.showAndWait();
-
+        word = StringUtils.normalizeString(word);
+        var ress = englishDAO.findWord(word);
+        if (ress.isEmpty()) {
+            resetText();
+            return;
+        }
+        var res = ress.get(0);
+        if (res != null) {
+            Ex.setText(res.getExample());
+            Pos.setText(res.getType());
+            Mn.setText(res.getMeaning());
+            Pro.setText(res.getPronunciation());
+            Sy.setText(res.getSynonym());
+            An.setText(res.getAntonyms());
         }
     }
 
-
-    public void HandleClickBtn(javafx.event.ActionEvent actionEvent) {
+    @FXML
+    protected void HandleClickBtn() throws SQLException {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        String word = Nw.getText();
+        String ex = Ex.getText();
+        String pos = Pos.getText();
+        String sy = Sy.getText();
+        String an = An.getText();
+        String mn = Mn.getText();
+        String pro = Pro.getText();
+        if (word.isEmpty() || word.isBlank()) {
+            AlertStyler.on(alert)
+                    .applyVintageStyle()
+                    .setTitle("Error")
+                    .setWindowTitle("Adding Word Failed")
+                    .setButtonStyle()
+                    .setMinSize()
+                    .build();
+            alert.initOwner(AppStage);
+            alert.setContentText("Word cannot be empty, please try again");
+            alert.showAndWait();
+        } else if (mn.isEmpty() || mn.isBlank()) {
+            AlertStyler.on(alert)
+                    .applyVintageStyle()
+                    .setTitle("Error")
+                    .setWindowTitle("Adding Word Failed")
+                    .setButtonStyle()
+                    .setMinSize()
+                    .build();
+            alert.initOwner(AppStage);
+            alert.setContentText("Meaning cannot be empty, please try again");
+            alert.showAndWait();
+        } else {
+            word = StringUtils.normalizeString(word);
+            English english = new English(word, mn, pro, pos, ex, sy, an);
+            if (englishDAO.updateWord(english)) {
+                AlertStyler.on(alert)
+                        .applyVintageStyle()
+                        .setTitle("Success")
+                        .setWindowTitle("Adding Word Success")
+                        .setButtonStyle()
+                        .setMinSize()
+                        .build();
+                alert.initOwner(AppStage);
+                alert.setContentText("Word: " + word + " has been added successfully");
+                alert.showAndWait();
+                resetText();
+            }
+        }
     }
 }

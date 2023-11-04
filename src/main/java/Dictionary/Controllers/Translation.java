@@ -21,7 +21,8 @@ public class Translation {
     public TextArea SourceLanguage;
     @FXML
     public TextArea TranslationLanguage;
-//    public Button recordButton = new Button();
+    @FXML
+    public Button recordButton = new Button();
 //
     private int count = 0;
     @FXML
@@ -32,8 +33,6 @@ public class Translation {
 //
     @FXML
     public void initialize() {
-
-
         SourceLanguage.setWrapText(true);
         SourceLanguage.setStyle("-fx-font-size: 19px; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-image: url(/Images/Background.png);");
 
@@ -69,16 +68,16 @@ public class Translation {
             }
         });
     }
-//
-//    @FXML
-//    public void handleVoice() {
-//        String textToTranslate = SourceLanguage.getText();
-//        if (textToTranslate.isEmpty() || textToTranslate.isBlank()) {
-//            return;
-//        }
-//        VoiceService.playVoice(textToTranslate);
-//    }
-//
+
+    @FXML
+    public void handleVoice() {
+        String textToTranslate = SourceLanguage.getText();
+        if (textToTranslate.isEmpty() || textToTranslate.isBlank()) {
+            return;
+        }
+        VoiceService.playVoice(textToTranslate);
+    }
+
     // Helper method to get the language code based on language name
     private String getLanguageCode(String languageName) {
         switch (languageName) {
@@ -88,7 +87,6 @@ public class Translation {
                 return "es";
             case "French":
                 return "fr";
-            // Add more cases for additional languages
             case "English":
             default:
                 return "en";
@@ -110,28 +108,28 @@ public class Translation {
     private void updateSourceLanguageOptions() {
 
     }
-//    private final RecordingService recordingService = RecordingService.getInstance();
+    private final RecordingService recordingService = RecordingService.getInstance();
 
-//    public void handleRecording() throws IOException {
-//        recordButton.setOnKeyPressed(event -> {
-//            if (event.getCode() == KeyCode.ENTER || event.getCode() == KeyCode.SPACE) {
-//                ++count;
-//                if (count % 2 == 1) {
-//                    System.out.println("Recording");
-//                    recordButton.setStyle("-fx-background-color: #ff0000");
-//                    recordingService.startRecording();
-//                    SourceLanguage.setText("");
-//                    TranslationLanguage.setText("");
-//                } else {
-//                    System.out.println("Stop recording");
-//                    recordButton.setStyle("-fx-background-color: #ffffff");
-//                    recordingService.stopRecording();
-//
-//                    translateAndDeleteFile();
-//                }
-//            }
-//        });
-//    }
+    public void handleRecording() throws IOException {
+        recordButton.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER || event.getCode() == KeyCode.SPACE) {
+                ++count;
+                if (count % 2 == 1) {
+                    System.out.println("Recording");
+                    recordButton.setStyle("-fx-background-color: #ff0000");
+                    recordingService.startRecording();
+                    SourceLanguage.setText("");
+                    TranslationLanguage.setText("");
+                } else {
+                    System.out.println("Stop recording");
+                    recordButton.setStyle("-fx-background-color: #ffffff");
+                    recordingService.stopRecording();
+
+                    translateAndDeleteFile();
+                }
+            }
+        });
+    }
 
     private void translateAndDeleteFile() {
         CompletableFuture<List<String>> serverCommunicationFuture = CompletableFuture.supplyAsync(() -> {
