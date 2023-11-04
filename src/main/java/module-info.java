@@ -21,10 +21,13 @@ module com.example.dictionary {
     opens Dictionary.Controllers;
 
     exports Dictionary.QuizGame;
+    exports Dictionary.Hangman;
 
     exports Dictionary to javafx.graphics;
 
     opens Dictionary.QuizGame;
     exports Dictionary.Controllers to javafx.fxml;
+
+    opens Dictionary.Hangman;
 
 }

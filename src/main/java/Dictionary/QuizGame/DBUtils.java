@@ -27,9 +27,7 @@ public class DBUtils {
             pStat.executeUpdate();
         }
         catch (SQLException e) {
-
             throw new RuntimeException(e);
-
         }
     }
     /** Method that retrieves players and their scores from MySQl DB */
