@@ -26,10 +26,8 @@ public class Dictionary implements Initializable {
         searchBtn.setTooltip(tooltip1);
         addBtn.setTooltip(tooltip2);
         translateBtn.setTooltip(tooltip3);
-        searchBtn.setOnAction(event -> showComponent("/View/SearchingUI.fxml"));
-
+        searchBtn.setOnAction(event -> showComponent("/View/SearchUI.fxml"));
         addBtn.setOnAction(event -> showComponent("/View/AdditionUI.fxml"));
-
         translateBtn.setOnAction(event -> showComponent("/View/TranslationUI.fxml"));
         attachBtn.setOnAction(event -> showComponent("/View/ImageTranslateUI.fxml"));
         quizBtn.setOnAction(event -> showComponent("/Quiz/quizView.fxml"));
