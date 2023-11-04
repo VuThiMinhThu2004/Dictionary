@@ -33,7 +33,7 @@ public class FileInput {
 
     public static ArrayList<String> objectsList1() {
         try {
-            File file = new File("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\input.txt");
+            File file = new File("C:\\Users\\ADMIN\\Sophomore\\OOP\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\input.txt");
             Scanner scan = new Scanner(file);
             while (scan.hasNextLine()) {
                 object1 = scan.nextLine();

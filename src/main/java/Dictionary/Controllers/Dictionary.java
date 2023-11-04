@@ -30,7 +30,7 @@ public class Dictionary implements Initializable {
         addBtn.setOnAction(event -> showComponent("/View/AdditionUI.fxml"));
         translateBtn.setOnAction(event -> showComponent("/View/TranslationUI.fxml"));
         attachBtn.setOnAction(event -> showComponent("/View/ImageTranslateUI.fxml"));
-        quizBtn.setOnAction(event -> showComponent("/Quiz/quizView.fxml"));
+        quizBtn.setOnAction(event -> showComponent("/Quiz/temp.fxml"));
 
         tooltip1.setShowDelay(Duration.seconds(0.1));
         tooltip2.setShowDelay(Duration.seconds(0.1));

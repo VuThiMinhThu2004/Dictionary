@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1000.0" styleClass="root" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.Dictionary">
-    <AnchorPane fx:id="container" layoutX="14.0" layoutY="14.0" prefHeight="700.0" prefWidth="833.0" styleClass="border" stylesheets="@../Style/Style.css" />
-    <Button fx:id="searchBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="848.0" layoutY="215.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" stylesheets="@../Style/Style.css" text="Search">
+<AnchorPane prefHeight="640.0" prefWidth="959.0" styleClass="root" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.Dictionary">
+    <AnchorPane fx:id="container" layoutX="14.0" layoutY="14.0" prefHeight="602.0" prefWidth="818.0" styleClass="border" stylesheets="@../Style/Style.css" />
+    <Button fx:id="searchBtn" graphicTextGap="5.0" layoutX="848.0" layoutY="215.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" stylesheets="@../Style/Style.css" text="Search">
         <tooltip>
             <Tooltip fx:id="tooltip1" text="Search" />
         </tooltip>
         <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
         </font>
       <graphic>
          <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
@@ -24,9 +24,9 @@
          </ImageView>
       </graphic>
     </Button>
-    <Button fx:id="addBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="848.0" layoutY="266.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" stylesheets="@../Style/Style.css" text="Add">
+    <Button fx:id="addBtn" graphicTextGap="5.0" layoutX="848.0" layoutY="266.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" stylesheets="@../Style/Style.css" text="Add">
         <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
         </font>
         <tooltip>
             <Tooltip fx:id="tooltip2" text="Add" />
@@ -39,9 +39,9 @@
          </ImageView>
       </graphic>
     </Button>
-    <Button fx:id="translateBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="848.0" layoutY="318.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" stylesheets="@../Style/Style.css" text="Translate">
+    <Button fx:id="translateBtn" graphicTextGap="5.0" layoutX="848.0" layoutY="318.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" stylesheets="@../Style/Style.css" text="Translate">
         <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
         </font>
         <tooltip>
             <Tooltip fx:id="tooltip3" text="Translate" />
@@ -54,9 +54,9 @@
          </ImageView>
       </graphic>
     </Button>
-    <Button fx:id="exitBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="848.0" layoutY="555.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" stylesheets="@../Style/Style.css" text="Exit">
+    <Button fx:id="exitBtn" graphicTextGap="5.0" layoutX="848.0" layoutY="555.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" stylesheets="@../Style/Style.css" text="Exit">
         <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
         </font>
         <tooltip>
             <Tooltip fx:id="tooltip4" text="Exit" />
@@ -69,12 +69,12 @@
          </ImageView>
       </graphic>
     </Button>
-    <Button fx:id="attachBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="848.0" layoutY="368.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" stylesheets="@../Style/Style.css" text="Attach">
+    <Button fx:id="attachBtn" graphicTextGap="5.0" layoutX="848.0" layoutY="368.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" stylesheets="@../Style/Style.css" text="Attach">
         <tooltip>
             <Tooltip fx:id="tooltip5" text="Attachment" />
         </tooltip>
         <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="Berlin Sans FB Demi Bold" size="15.0" />
         </font>
       <graphic>
          <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
@@ -84,7 +84,7 @@
          </ImageView>
       </graphic>
     </Button>
-    <Button fx:id="quizBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="848.0" layoutY="164.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" stylesheets="@../Style/Style.css" text="Quiz">
+    <Button fx:id="quizBtn" graphicTextGap="5.0" layoutX="848.0" layoutY="164.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" styleClass="transparent-button" stylesheets="@../Style/Style.css" text="Quiz">
         <tooltip>
             <Tooltip fx:id="tooltip6" text="Quiz">
                 <font>
@@ -93,7 +93,7 @@
             </Tooltip>
         </tooltip>
       <font>
-         <Font name="System Bold" size="15.0" />
+         <Font name="Berlin Sans FB Demi Bold" size="15.0" />
       </font>
       <graphic>
          <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
@@ -103,7 +103,7 @@
          </ImageView>
       </graphic>
     </Button>
-   <ImageView fitHeight="83.0" fitWidth="90.0" layoutX="864.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+   <ImageView fitHeight="83.0" fitWidth="90.0" layoutX="873.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../Images/icons8-dictionary-64.png" />
       </image>

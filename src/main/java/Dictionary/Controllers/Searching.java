@@ -132,7 +132,7 @@ public class Searching implements Initializable {
             alert.showAndWait();
             searchBox.setText("");
             searchResultsListView.getItems().remove(currentWord.getWord());
-            countRes.setText(searchResultsListView.getItems().size() + " Kết quả liên quan");
+            countRes.setText(searchResultsListView.getItems().size() + " Related Results");
             notAvailableLabel.setText("");
             if(!searchResultsListView.getItems().isEmpty()){
                 currentWord = englishDAO.getWord(searchResultsListView.getItems().get(0));
@@ -269,7 +269,7 @@ public class Searching implements Initializable {
 
     public void clearSearchResultsView() {
         searchResultsListView.getItems().clear();
-        countRes.setText(searchResultsListView.getItems().size() + " Kết quả liên quan");
+        countRes.setText(searchResultsListView.getItems().size() + " Related Results");
         wordDefinition.setText("");
     }
 

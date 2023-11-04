@@ -1,19 +1,11 @@
 package Dictionary.QuizGame;
 
-/**
- * Project Name: Quiz Game
- * COP 3330C Object Oriented Programming
- * written by: @author Nenad Jovanovic (njovanovic1@mail.valenciacollege.edu)
- * created: 12/5/22
- */
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 
 import java.io.FileNotFoundException;
@@ -30,10 +22,21 @@ public class MainController implements Initializable {
     TableColumn<Player,String> column1;
     @FXML
     TableColumn<Player, Integer> column2;
+
     @FXML
-    GridPane gr;
+    Label object1;
     @FXML
-    Label object1,clock,nameArea,point,end,plus,table,question;
+    Label clock;
+    @FXML
+    Label nameArea;
+    @FXML
+    Label point;
+    @FXML
+    Label end;
+    @FXML
+    Label table;
+    @FXML
+    Label question;
     @FXML
     Text timestamps;
     @FXML
@@ -93,7 +96,7 @@ public class MainController implements Initializable {
         choice2.setVisible(false);
         choice3.setVisible(false);
         choice4.setVisible(false);
-        gr.setVisible(false);
+//        gr.setVisible(false);
         column1.setCellValueFactory(new PropertyValueFactory<>("name"));
         column2.setCellValueFactory(new PropertyValueFactory<>("point"));
         listP = DBUtils.findAllPeople();
@@ -109,14 +112,13 @@ public class MainController implements Initializable {
         }
         playerTable.setItems(listSorted);
 
-        FileOutputStream fs = new FileOutputStream("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\output.txt");
+        FileOutputStream fs = new FileOutputStream("C:\\Users\\ADMIN\\Sophomore\\OOP\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\output.txt");
         PrintWriter pw = new PrintWriter(fs);
         pw.println(listSorted);
         pw.close();
     }
     /** Method that checks the selected answer and stores points and timestamps into a stack list */
     private void setAnswer(Button b) {
-
         if (isTheAnswer(b.getText(), FileInput.answers())) {
             j++;
             point.setText("" + j);
