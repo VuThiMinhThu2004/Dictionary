@@ -10,7 +10,6 @@ module com.example.dictionary {
     requires java.scripting;
     requires jlayer;
 
-
     requires javafx.graphics;
 
     opens com.example.dictionary to javafx.fxml;

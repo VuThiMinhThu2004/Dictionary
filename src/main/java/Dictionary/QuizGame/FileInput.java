@@ -22,7 +22,7 @@ public class FileInput {
         results.add("C. suitable ");
         results.add("D. special dishes");
         results.add("C. became");
-        results.add("D. arrived / discovered / was preparing");
+        results.add("D. A and B");
         results.add("A. under");
         results.add("B. mysterious");
         results.add("A. interested in");
