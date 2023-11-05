@@ -7,8 +7,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1000.0" styleClass="root" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.Dictionary">
-    <AnchorPane fx:id="container" layoutX="14.0" layoutY="14.0" prefHeight="650.0" prefWidth="818.0" styleClass="border" stylesheets="@../Style/Style.css" />
+<AnchorPane prefHeight="750.0" prefWidth="1000.0" style="-fx-background-color: #ffd58a;" styleClass="root" stylesheets="@../Style/Style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.Dictionary">
+    <AnchorPane fx:id="container" layoutX="14.0" layoutY="14.0" prefHeight="600.0" prefWidth="818.0" style="-fx-background-color: #ffeecc;" styleClass="border" stylesheets="@../Style/Style.css" />
     <Button fx:id="searchBtn" graphicTextGap="5.0" layoutX="860.0" layoutY="150.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" styleClass="transparent-button" stylesheets="@../Style/Style.css" text="Search">
         <tooltip>
             <Tooltip fx:id="tooltip1" text="Search" />

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="605.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.Searching">
+<AnchorPane prefHeight="600.0" prefWidth="833.0" style="-fx-background-color: #ffdbaa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.Searching">
     <AnchorPane prefHeight="144.0" prefWidth="833.0" styleClass="definition-wrapper" stylesheets="@../Style/Style.css">
         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../Images/icons8-language-64 (1).png" />
@@ -37,11 +37,11 @@
             </Label>
         </AnchorPane>
     </AnchorPane>
-    <AnchorPane layoutY="142.0" prefHeight="463.0" prefWidth="833.0" styleClass="border" stylesheets="@../Style/Style.css">
-        <AnchorPane prefHeight="463.0" prefWidth="311.0" stylesheets="@../Style/Style.css">
+    <AnchorPane layoutY="145.0" prefHeight="463.0" prefWidth="833.0" styleClass="border" stylesheets="@../Style/Style.css">
+        <AnchorPane prefHeight="470.0" prefWidth="311.0" style="-fx-background-color: #ffc26f;" stylesheets="@../Style/Style.css">
             <ListView fx:id="searchResultsListView" layoutX="14.0" layoutY="62.0" prefHeight="380.0" prefWidth="287.0" styleClass="title" stylesheets="@../Style/Style.css" />
             <AnchorPane prefHeight="57.0" prefWidth="311.0">
-                <Label fx:id="countRes" layoutY="4.0" prefHeight="57.0" prefWidth="311.0">
+                <Label fx:id="countRes" layoutY="4.0" prefHeight="57.0" prefWidth="311.0" style="-fx-background-image: #ffc26f; -fx-background-color: #ffc26f;">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
@@ -53,10 +53,10 @@
                 </Label>
             </AnchorPane>
         </AnchorPane>
-        <AnchorPane layoutX="311.0" layoutY="-8.0" prefHeight="471.0" prefWidth="522.0">
-            <AnchorPane layoutY="6.0" prefHeight="57.0" prefWidth="522.0" styleClass="cancel-button" stylesheets="@../Style/Style.css" />
+        <AnchorPane layoutX="310.0" prefHeight="470.0" prefWidth="525.0" style="-fx-background-color: #ffc26f;">
+            <AnchorPane layoutY="14.0" prefHeight="57.0" prefWidth="522.0" style="-fx-background-color: #ffc26f;" styleClass="cancel-button" stylesheets="@../Style/Style.css" />
             <AnchorPane layoutY="60.0" prefHeight="390.0" prefWidth="522.0">
-                <AnchorPane prefHeight="57.0" prefWidth="522.0" stylesheets="@../Style/Style.css">
+                <AnchorPane prefHeight="57.0" prefWidth="522.0" style="-fx-background-color: #ffc26f;" stylesheets="@../Style/Style.css">
                     <Button layoutX="457.0" layoutY="1.0" mnemonicParsing="false" onAction="#speakWord" prefHeight="50.0" prefWidth="50.0" styleClass="transparent-button" wrapText="true">
                         <tooltip>
                             <Tooltip fx:id="tooltip1" text="Phonetic" />
@@ -96,7 +96,7 @@
                           <Image url="@../Images/icons8_edit_64px.png" />
                       </ImageView>
                 </AnchorPane>
-                <TextArea fx:id="wordDefinition" editable="false" layoutX="4.0" layoutY="62.0" prefHeight="328.0" prefWidth="506.0" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
+                <TextArea fx:id="wordDefinition" editable="false" layoutY="58.0" prefHeight="328.0" prefWidth="505.0" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
             </AnchorPane>
         </AnchorPane>
     </AnchorPane>
