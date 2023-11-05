@@ -112,7 +112,7 @@ public class MainController implements Initializable {
         }
         playerTable.setItems(listSorted);
 
-        FileOutputStream fs = new FileOutputStream("C:\\Users\\ADMIN\\Sophomore\\OOP\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\output.txt");
+        FileOutputStream fs = new FileOutputStream("D:\\Dictionary\\src\\main\\java\\Dictionary\\QuizGame\\output.txt");
         PrintWriter pw = new PrintWriter(fs);
         pw.println(listSorted);
         pw.close();
