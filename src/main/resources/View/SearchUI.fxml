@@ -41,7 +41,7 @@
         <AnchorPane prefHeight="470.0" prefWidth="311.0" style="-fx-background-color: #ffc26f;" stylesheets="@../Style/Style.css">
             <ListView fx:id="searchResultsListView" layoutX="14.0" layoutY="62.0" prefHeight="380.0" prefWidth="287.0" styleClass="title" stylesheets="@../Style/Style.css" />
             <AnchorPane prefHeight="57.0" prefWidth="311.0">
-                <Label fx:id="countRes" layoutY="4.0" prefHeight="57.0" prefWidth="311.0" style="-fx-background-image: #ffc26f; -fx-background-color: #ffc26f;">
+                <Label fx:id="countRes" layoutY="4.0" prefHeight="57.0" prefWidth="311.0" style="-fx-background-color: #ffc26f;">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
