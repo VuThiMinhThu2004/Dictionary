@@ -11,7 +11,6 @@ module com.example.dictionary {
     requires jlayer;
 
 
-
     requires javafx.graphics;
     requires httpclient;
     requires httpcore;
