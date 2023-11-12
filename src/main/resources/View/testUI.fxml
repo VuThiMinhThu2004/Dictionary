@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #1D5D9B;">
+
+    <!-- Group 14 -->
+    <ImageView fitHeight="273.0" fitWidth="1546.0" layoutX="-180.0" layoutY="470.0">
+        <image>
+            <Image url="12919026_60251-removebg-preview.png"/>
+        </image>
+    </ImageView>
+
+    <!-- DONATEME! -->
+    <ImageView fitHeight="102.0" fitWidth="398.0" layoutX="301.0" layoutY="209.0">
+        <image>
+            <Image url="your_donate_image.png"/>
+        </image>
+    </ImageView>
+
+    <!-- Group 1 -->
+    <AnchorPane prefHeight="45.0" prefWidth="204.0" layoutX="-12.0" layoutY="87.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 0px 40px 40px 0px;">
+
+        <!-- search -->
+        <AnchorPane prefHeight="30.0" prefWidth="29.85" layoutX="153.63" layoutY="94.0" style="-fx-background-color: #FFFFFF;">
+            <!-- Vector: Add your vector here -->
+        </AnchorPane>
+
+        <!-- Search -->
+        <ImageView fitHeight="38.0" fitWidth="96.53" layoutX="12.33" layoutY="90.0" style="-fx-font-family: 'Merriweather Sans'; -fx-font-style: normal; -fx-font-weight: 300; -fx-font-size: 30.0; -fx-line-height: 38.0; -fx-text-fill: #000000;">
+            <image>
+                <Image url="your_search_image.png"/>
+            </image>
+        </ImageView>
+
+    </AnchorPane>
+
+    <!-- ... Add other elements similarly ... -->
+
+</AnchorPane>
