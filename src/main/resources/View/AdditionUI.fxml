@@ -70,9 +70,9 @@
             </font>
         </Label>
         <TextArea fx:id="An" layoutX="594.0" layoutY="131.0" prefHeight="40.0" prefWidth="208.0" promptText="Antonym" styleClass="title" wrapText="true" />
-          <ImageView fitHeight="40.0" fitWidth="67.0" layoutX="392.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
-              <Image url="@../Images/icons8-add-100.png" />
-          </ImageView>
+        <ImageView fitHeight="40.0" fitWidth="67.0" layoutX="392.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Images/icons8-add-100.png" />
+        </ImageView>
     </AnchorPane>
 
 

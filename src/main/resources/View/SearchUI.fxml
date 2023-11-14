@@ -61,40 +61,40 @@
                         <tooltip>
                             <Tooltip fx:id="tooltip1" text="Phonetic" />
                         </tooltip>
-                  <graphic>
+                        <graphic>
                             <ImageView fitHeight="42.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                                 <Image url="@../Images/icons8_speaker_64px.png" />
                             </ImageView>
-                  </graphic>
+                        </graphic>
                     </Button>
                     <Button layoutX="406.0" layoutY="1.0" mnemonicParsing="false" onAction="#deleteWord" prefHeight="50.0" prefWidth="50.0" styleClass="transparent-button" wrapText="true">
                         <tooltip>
                             <Tooltip fx:id="tooltip2" text="Delete Word" />
                         </tooltip>
-                  <graphic>
+                        <graphic>
                             <ImageView fitHeight="40.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
                                 <Image url="@../Images/icons8_delete_bin_64px.png" />
                             </ImageView>
-                  </graphic>
+                        </graphic>
                     </Button>
                     <Button layoutX="355.0" layoutY="3.0" mnemonicParsing="false" onAction="#updateWord" prefHeight="50.0" prefWidth="50.0" styleClass="transparent-button" wrapText="true">
                         <tooltip>
                             <Tooltip fx:id="tooltip3" text="Update Word" />
                         </tooltip>
                     </Button>
-                   <Label alignment="TOP_LEFT" prefHeight="57.0" prefWidth="232.0" snapToPixel="false" text="Definition">
-                       <font>
-                           <Font name="Berlin Sans FB Demi Bold" size="20.0" />
-                       </font>
-                       <graphic>
-                           <ImageView fitHeight="55.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
-                               <Image url="@../Images/icons8_brick_64px.png" />
-                           </ImageView>
-                       </graphic>
-                   </Label>
-                      <ImageView fitHeight="43.0" fitWidth="47.0" layoutX="359.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-                          <Image url="@../Images/icons8_edit_64px.png" />
-                      </ImageView>
+                    <Label alignment="TOP_LEFT" prefHeight="57.0" prefWidth="232.0" snapToPixel="false" text="Definition">
+                        <font>
+                            <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                        </font>
+                        <graphic>
+                            <ImageView fitHeight="55.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                                <Image url="@../Images/icons8_brick_64px.png" />
+                            </ImageView>
+                        </graphic>
+                    </Label>
+                    <ImageView fitHeight="43.0" fitWidth="47.0" layoutX="359.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../Images/icons8_edit_64px.png" />
+                    </ImageView>
                 </AnchorPane>
                 <TextArea fx:id="wordDefinition" editable="false" layoutY="58.0" prefHeight="328.0" prefWidth="505.0" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
             </AnchorPane>
