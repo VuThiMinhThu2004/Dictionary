@@ -30,7 +30,7 @@ public class Dictionary implements Initializable {
         addBtn.setOnAction(event -> showComponent("/View/AdditionUI.fxml"));
         translateBtn.setOnAction(event -> showComponent("/View/TranslationUI.fxml"));
         attachBtn.setOnAction(event -> showComponent("/View/ImageTranslateUI.fxml"));
-        quizBtn.setOnAction(event -> showComponent("/Quiz/quizView.fxml"));
+        quizBtn.setOnAction(event -> showComponent("/Quiz/temp.fxml"));
         hangmanBtn.setOnAction(event -> showComponent("/Quiz/hangman.fxml"));
 
 

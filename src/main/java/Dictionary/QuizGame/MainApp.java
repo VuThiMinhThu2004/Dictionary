@@ -9,7 +9,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("/Quiz/quizView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("/Quiz/temp.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 816, 688);
         stage.setTitle("Trivia Game");
         stage.setScene(scene);
