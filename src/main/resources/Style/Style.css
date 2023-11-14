@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'MuseoModerno';
-    src: url('../Font/MuseoModerno.ttf');
+    font-family: 'Voces Regular';
+    src: url('../Font/Voces-Regular.ttf');
 }
 
 .root {
@@ -97,36 +97,6 @@
     -fx-effect: dropshadow(three-pass-box, #8b4513, 2, 0, 0, 1); /* saddle brown */
 }
 
-.button {
-    /* Kiểu cho các nút */
-    -fx-background-color: #1D5D9B;
-    -fx-background-radius: 5;
-    -fx-padding: 0 0 0 10;
-    -fx-background-insets: 0;
-    -fx-text-fill: #1D5D9B; /* saddle blue */
-    -fx-font-weight: bold;
-    -fx-font-family: 'Crimson Text';
-
-    /* Thêm hiệu ứng mở rộng */
-    -fx-scale-x: 1;
-    -fx-scale-y: 1;
-    -fx-cursor: hand;
-    -fx-transition-duration: 0.3s;
-}
-
-.button:hover,
-.button:focused {
-    /* Hiệu ứng mở rộng khi di chuột qua hoặc được chọn */
-    -fx-background-color: #1D5D9B; /* moccasin */
-    -fx-scale-x: 1.0;
-    -fx-scale-y: 1.0;
-
-    /*-fx-translate-x: 70;*/
-    /*-fx-cursor: hand;  Thêm dòng này nếu bạn muốn có hình con trỏ khi rê chuột qua button */
-
-}
-
-
 .edit-button:hover,
 .delete-button:hover,
 .volume-button:hover,
@@ -141,19 +111,6 @@
 .save-button:pressed {
     -fx-effect: dropshadow(three-pass-box, #8b4513, 4, 0, 0, 1); /* saddle brown */
 }
-
-.button:armed {
-    /* Hiệu ứng trượt sang phải khi button được nhấn (chuột giữ) */
-    -fx-background-color: #1D5D9B; /* moccasin */
-    -fx-translate-x: 50px;
-}
-
-.button:pressed {
-    /* Hiệu ứng trượt sang phải khi button được nhấp (chuột nhả) */
-    -fx-background-color: #1D5D9B; /* moccasin */
-    -fx-translate-x: 50px;
-}
-
 
 .save-button {
     -fx-background-color: #f8e6c8; /* eggshell */

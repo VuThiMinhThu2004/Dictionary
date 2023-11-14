@@ -15,7 +15,6 @@ module com.example.dictionary {
     requires httpclient;
     requires httpcore;
     requires json;
-    requires org.controlsfx.controls;
 
     opens com.example.dictionary to javafx.fxml;
     exports com.example.dictionary;
