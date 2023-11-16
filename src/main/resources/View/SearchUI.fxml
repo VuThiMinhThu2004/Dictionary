@@ -23,7 +23,7 @@
                 </font>
             </TextField>
             <ImageView fitHeight="43.0" fitWidth="43.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" styleClass="title">
-                <Image url="@../IconsThu/search%20(1).png" />
+                <Image url="@../IconsThu/search (1).png" />
             </ImageView>
         </AnchorPane>
         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="720.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
