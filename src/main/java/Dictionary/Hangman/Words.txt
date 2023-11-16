@@ -47,4 +47,6 @@ marked
 market
 marvel
 abduct
-abide
+abideHi
+Rice
+Went

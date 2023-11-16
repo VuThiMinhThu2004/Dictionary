@@ -16,6 +16,8 @@ module com.example.dictionary {
     requires httpcore;
     requires json;
 
+    requires javafx.swing;
+
     opens com.example.dictionary to javafx.fxml;
     exports com.example.dictionary;
 
@@ -31,5 +33,6 @@ module com.example.dictionary {
     exports Dictionary.Controllers to javafx.fxml;
 
     opens Dictionary.Hangman;
-
+    opens Dictionary.CrossWord;
+    exports Dictionary.CrossWord;
 }

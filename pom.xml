@@ -119,6 +119,11 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.28</version> <!-- Sử dụng phiên bản cụ thể của bạn -->
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>19-ea+11</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

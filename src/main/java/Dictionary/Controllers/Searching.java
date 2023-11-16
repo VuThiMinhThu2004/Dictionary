@@ -16,16 +16,21 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import static Dictionary.MyDictionaryApp.AppStage;
 import static Dictionary.DBConfig.englishDAO;
+import static Dictionary.MyDictionaryApp.AppStage;
 
 public class Searching implements Initializable {
+    private ArrayList<String> searchedWords = new ArrayList<>();
     @FXML
     public ListView<String> searchResultsListView;
     @FXML
@@ -57,6 +62,8 @@ public class Searching implements Initializable {
             }
             String selectedWord = searchResultsListView.getSelectionModel().getSelectedItem();
             if (selectedWord != null) {
+                //searchedWords.add(searchTerm);
+                saveSearchWordToFile(selectedWord);
                 try {
                     English english = englishDAO.getWord(selectedWord);
                     if (english != null) {
@@ -95,8 +102,10 @@ public class Searching implements Initializable {
                 notAvailableLabel.setText("Sorry, We don't have word " + searchTerm);
                 return;
             }
+
             currentWord = list.get(0);
             wordDefinition.setText(englishDAO.renderDefinition(currentWord));
+
             for (English english : list) {
                 System.out.println(english.getWord());
                 searchResultsListView.getItems().add(english.getWord());
@@ -109,6 +118,27 @@ public class Searching implements Initializable {
         }
     }
 
+    public void saveSearchWordToFile(String word) {
+        // Đường dẫn của tệp tin để lưu từ vừa tìm kiếm
+        String filePath = "D:\\Dictionary\\src\\main\\java\\Dictionary\\Hangman\\Words.txt";
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
+            // Ghi từ tìm kiếm vào cuối tệp tin
+            writer.write(word);
+            writer.newLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Xử lý nếu có lỗi khi ghi vào tệp tin
+        }
+    }
+
+    public ArrayList<String> getSearchedWords() {
+        return searchedWords;
+    }
+
+    public void setSearchedWords(ArrayList<String> searchedWords) {
+        this.searchedWords = searchedWords;
+    }
     @FXML
     public void speakWord() {
         VoiceService.playVoice(currentWord.getWord());
