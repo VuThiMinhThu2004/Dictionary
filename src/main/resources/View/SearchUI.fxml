@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
@@ -13,24 +14,18 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffdbaa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.Searching">
     <AnchorPane prefHeight="144.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" styleClass="definition-text" stylesheets="@../Style/Style.css">
-        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../Images/icons8-language-64 (1).png" />
-        </ImageView>
-        <AnchorPane layoutX="272.0" layoutY="48.0" prefHeight="46.0" prefWidth="287.0" styleClass="search-box" stylesheets="@../Style/Frame1.css">
+        <AnchorPane layoutX="180.0" layoutY="23.0" prefHeight="50.0" prefWidth="540.0" style="-fx-effect: #1D5D9B; -fx-border-color: #1D5D9B;" styleClass="search-box" stylesheets="@../Style/Style.css">
             <TextField fx:id="searchBox" layoutX="47.0" layoutY="2.0" onKeyReleased="#handleSearch" prefHeight="43.0" prefWidth="240.0" promptText="Type the word..." styleClass="text-field">
                 <font>
                     <Font size="15.0" />
                 </font>
             </TextField>
-            <ImageView fitHeight="43.0" fitWidth="43.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" styleClass="title">
-                <Image url="@../IconsThu/search (1).png" />
+            <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../IconsThu/searchButton.png" />
             </ImageView>
         </AnchorPane>
-        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="720.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../Images/icons8-language-64.png" />
-        </ImageView>
-        <AnchorPane layoutX="192.0" layoutY="96.0" prefHeight="31.0" prefWidth="403.0">
-            <Label fx:id="notAvailableLabel" layoutX="50.0" prefHeight="31.0" prefWidth="326.0" styleClass="title" textAlignment="CENTER">
+        <AnchorPane layoutX="163.0" layoutY="81.0" prefHeight="31.0" prefWidth="403.0">
+            <Label fx:id="notAvailableLabel" layoutX="-1.0" prefHeight="50.0" prefWidth="574.0" styleClass="title" textAlignment="CENTER">
                 <font>
                     <Font name="System Bold" size="15.0" />
                 </font>
@@ -38,22 +33,21 @@
         </AnchorPane>
     </AnchorPane>
     <AnchorPane layoutY="144.0" prefHeight="463.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" styleClass="border" stylesheets="@../Style/Style.css">
-        <AnchorPane prefHeight="470.0" prefWidth="311.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../Style/Style.css">
-            <ListView fx:id="searchResultsListView" layoutX="14.0" layoutY="62.0" prefHeight="380.0" prefWidth="287.0" styleClass="definition-text" stylesheets="@../Style/Frame1.css" />
+        <AnchorPane layoutX="14.0" prefHeight="470.0" prefWidth="311.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../Style/Style.css">
+            <ListView fx:id="searchResultsListView" layoutX="14.0" layoutY="62.0" prefHeight="380.0" prefWidth="287.0" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="definition-text">
+            <stylesheets>
+               <URL value="@../Style/Frame1.css" />
+               <URL value="@../Style/Style.css" />
+            </stylesheets></ListView>
             <AnchorPane prefHeight="57.0" prefWidth="311.0">
                 <Label fx:id="countRes" layoutY="4.0" prefHeight="57.0" prefWidth="311.0" style="-fx-background-color: #FFFFFF;">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
-                    <graphic>
-                        <ImageView fitHeight="54.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-                            <Image url="@../Images/icons8_arrow_64px.png" />
-                        </ImageView>
-                    </graphic>
                 </Label>
             </AnchorPane>
         </AnchorPane>
-        <AnchorPane layoutX="310.0" prefHeight="470.0" prefWidth="525.0" style="-fx-background-color: #FFFFFF;">
+        <AnchorPane layoutX="360.0" prefHeight="470.0" prefWidth="525.0" style="-fx-background-color: #FFFFFF;">
             <AnchorPane layoutY="14.0" prefHeight="57.0" prefWidth="522.0" style="-fx-background-color: #FFFFFF;" styleClass="cancel-button" stylesheets="@../Style/Style.css" />
             <AnchorPane layoutY="60.0" prefHeight="390.0" prefWidth="522.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../Style/Style.css">
                 <AnchorPane prefHeight="57.0" prefWidth="522.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../Style/Style.css">
@@ -63,7 +57,7 @@
                         </tooltip>
                         <graphic>
                             <ImageView fitHeight="42.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
-                                <Image url="@../Images/icons8_speaker_64px.png" />
+                                <Image url="@../IconsThu/Vector.png" />
                             </ImageView>
                         </graphic>
                     </Button>
@@ -73,7 +67,7 @@
                         </tooltip>
                         <graphic>
                             <ImageView fitHeight="40.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-                                <Image url="@../Images/icons8_delete_bin_64px.png" />
+                                <Image url="@../IconsThu/heart.png" />
                             </ImageView>
                         </graphic>
                     </Button>
@@ -83,7 +77,7 @@
                         </tooltip>
                   <graphic>
                           <ImageView fitHeight="43.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-                              <Image url="@../Images/icons8_edit_64px.png" />
+                              <Image url="@../IconsThu/pencil.png" />
                           </ImageView>
                   </graphic>
                     </Button>
@@ -98,7 +92,7 @@
                         </graphic>
                     </Label>
                 </AnchorPane>
-                <TextArea fx:id="wordDefinition" editable="false" layoutY="58.0" prefHeight="328.0" prefWidth="505.0" styleClass="definition-text" stylesheets="@../Style/Frame1.css" wrapText="true" />
+                <TextArea fx:id="wordDefinition" editable="false" layoutY="58.0" prefHeight="328.0" prefWidth="505.0" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="definition-text" stylesheets="@../Style/Frame1.css" wrapText="true" />
             </AnchorPane>
         </AnchorPane>
     </AnchorPane>
