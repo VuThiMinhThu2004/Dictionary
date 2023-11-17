@@ -27,10 +27,10 @@ public class Dictionary implements Initializable {
         addBtn.setTooltip(tooltip2);
         translateBtn.setTooltip(tooltip3);
         searchBtn.setOnAction(event -> showComponent("/View/tempSearch.fxml"));
-        addBtn.setOnAction(event -> showComponent("/View/AdditionUI.fxml"));
-        translateBtn.setOnAction(event -> showComponent("/View/TranslationUI.fxml"));
+        addBtn.setOnAction(event -> showComponent("/View/tempAdd.fxml"));
+        translateBtn.setOnAction(event -> showComponent("/View/tempTranslation.fxml"));
         attachBtn.setOnAction(event -> showComponent("/View/ImageTranslateUI.fxml"));
-        quizBtn.setOnAction(event -> showComponent("/Quiz/QuizView.fxml"));
+        quizBtn.setOnAction(event -> showComponent("/Quiz/quizView.fxml"));
         hangmanBtn.setOnAction(event -> showComponent("/Quiz/hangman.fxml"));
 
 

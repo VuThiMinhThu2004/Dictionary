@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -8,99 +7,123 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="700.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.QuizGame.MainController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.QuizGame.MainController">
+    <AnchorPane prefHeight="149.0" prefWidth="900.0" stylesheets="@../Style/Style.css">
+        <children>
+            <Label layoutX="364.0" layoutY="52.0" text="Quiz Time!!!">
+                <font>
+                    <Font name="System Bold" size="30.0" />
+                </font>
+            </Label>
+        </children>
+    </AnchorPane>
 
-    <GridPane alignment="CENTER" layoutX="8.0" layoutY="11.0" prefHeight="370.0" prefWidth="820.0">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="903.1999877929687" minWidth="10.0" prefWidth="771.8000122070314" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints />
-            <RowConstraints maxHeight="298.0" minHeight="10.0" prefHeight="243.20001220703125" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="298.0" minHeight="10.0" prefHeight="42.3999938964844" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="226.0" minHeight="10.0" prefHeight="68.79998779296878" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="217.0" minHeight="10.0" prefHeight="49.60001220703123" vgrow="SOMETIMES" />
-        </rowConstraints>
-        <Label fx:id="nameArea" alignment="TOP_CENTER" prefHeight="35.0" prefWidth="197.0" style="-fx-font-family: VERDANA; -fx-font-weight: BOLD; -fx-font-size: 25;" text=" " GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
-            <graphic>
-                <TableView fx:id="playerTable" prefHeight="415.0" prefWidth="280.0" style="-fx-font-size: 20;">
-                    <placeholder>
-                        <Label text="" />
-                    </placeholder>
-                    <columns>
-                        <TableColumn fx:id="column1" editable="false" minWidth="0.0" prefWidth="140.0" sortable="false" text="Player" />
-                        <TableColumn fx:id="column2" editable="false" prefWidth="139.0" sortType="DESCENDING" text="Points" />
-                    </columns>
-                    <effect>
-                        <DropShadow />
-                    </effect>
-                </TableView>
-            </graphic></Label>
-        <Label fx:id="table" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="20.0" prefWidth="100.0" style="-fx-font-family: VERDANA; -fx-font-weight: bold; -fx-font-size: 20;" text="Points :" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP" />
-        <Label fx:id="object1" maxWidth="820.0" prefHeight="40.0" prefWidth="820.0" style="-fx-font-family: VERDANA; -fx-font-weight: BOLD; -fx-font-size: 20;" text="     Object 1" textOverrun="WORD_ELLIPSIS" wrapText="true" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
-        <Label fx:id="end" alignment="CENTER" prefHeight="67.0" prefWidth="200.0" style="-fx-font-family: VERDANA; -fx-font-weight: BOLD; -fx-font-size: 20; -fx-text-fill: red;" text="Game Over !" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4" GridPane.valignment="TOP" GridPane.vgrow="SOMETIMES">
+    <AnchorPane layoutY="149.0" prefHeight="451.0" prefWidth="900.0" stylesheets="@../Style/Style.css">
+        <children>
+            <AnchorPane layoutX="741.0" layoutY="360.0" prefHeight="100.0" prefWidth="100.0">
+                <children>
+                    <Label alignment="CENTER" layoutY="3.0" prefHeight="22.0" prefWidth="103.0" text="Countdown">
+                        <font>
+                            <Font name="System Bold" size="18.0" />
+                        </font>
+                    </Label>
+                    <Label fx:id="clock" alignment="CENTER" layoutX="2.0" layoutY="25.0" prefHeight="69.0" prefWidth="100.0">
+                        <font>
+                            <Font name="Berlin Sans FB Demi Bold" size="63.0" />
+                        </font>
+                    </Label>
+                </children>
+            </AnchorPane>
+            <Button fx:id="generateReport" layoutX="379.0" layoutY="425.0" mnemonicParsing="false" onAction="#showResults" style="-fx-background-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="edit-button" stylesheets="@../Style/Style.css" text="Generate Report" textFill="#fffcfc">
+                <font>
+                    <Font name="System Bold" size="19.0" />
+                </font>
+            </Button>
+            <AnchorPane layoutX="359.0" layoutY="370.0" prefHeight="40.0" prefWidth="182.0">
+                <children>
+                    <TextField fx:id="player" alignment="CENTER" onAction="#startThread" prefHeight="40.0" prefWidth="182.0" promptText="Insert your name">
+                        <font>
+                            <Font name="System Bold" size="15.0" />
+                        </font>
+                    </TextField>
+                </children>
+            </AnchorPane>
+            <AnchorPane layoutX="223.0" layoutY="240.0" prefHeight="130.0" prefWidth="453.0">
+                <children>
+                    <Button fx:id="choice1" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" onAction="#checkResult1" prefHeight="40.0" prefWidth="191.0" style="-fx-background-color: #1D5D9B; -fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="edit-button" stylesheets="@../Style/Style.css">
+                        <font>
+                            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="choice2" layoutX="249.0" layoutY="22.0" mnemonicParsing="false" onAction="#checkResult2" prefHeight="40.0" prefWidth="191.0" style="-fx-background-color: #1D5D9B; -fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="edit-button" stylesheets="@../Style/Style.css">
+                        <font>
+                            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="choice3" layoutX="14.0" layoutY="73.0" mnemonicParsing="false" onAction="#checkResult3" prefHeight="40.0" prefWidth="191.0" style="-fx-background-color: #1D5D9B; -fx-effect: #1D5D9B; -fx-border-color: #1D5D9B;" styleClass="edit-button" stylesheets="@../Style/Style.css">
+                        <font>
+                            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="choice4" layoutX="249.0" layoutY="73.0" mnemonicParsing="false" onAction="#checkResult4" prefHeight="40.0" prefWidth="191.0" style="-fx-background-color: #1D5D9B; -fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="edit-button" stylesheets="@../Style/Style.css">
+                        <font>
+                            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                        </font>
+                    </Button>
+                </children>
+            </AnchorPane>
+            <Label fx:id="question" layoutX="14.0" layoutY="107.0">
+                <font>
+                    <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+                </font></Label>
+            <Label fx:id="end" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="407.0" layoutY="222.0" prefHeight="18.0" prefWidth="85.0" text="OVER">
             <font>
-                <Font name="Arial Bold Italic" size="40.0" />
+               <Font name="System Bold" size="12.0" />
             </font></Label>
-        <Label fx:id="question" prefHeight="35.0" prefWidth="200.0" style="-fx-font-family: VERDANA; -fx-font-weight: bold; -fx-font-size: 20;" text="Question " GridPane.rowIndex="2" />
-        <AnchorPane prefHeight="199.0" prefWidth="207.0" GridPane.rowIndex="1">
-            <Label fx:id="clock" alignment="CENTER" ellipsisString=":" layoutX="18.0" layoutY="92.0" prefHeight="143.0" prefWidth="144.0" style="-fx-font-family: VERDANA; -fx-font-weight: BOLD; -fx-font-size: 70;" text="5" />
-            <Label alignment="CENTER" layoutY="92.0" prefHeight="30.0" prefWidth="180.0" style="-fx-font-family: DAYTONA; -fx-font-weight: bold; -fx-font-size: 20;" text="Countdown Clock" />
-            <Label fx:id="point" alignment="TOP_CENTER" layoutX="100.0" prefHeight="20.0" prefWidth="40.0" style="-fx-font-family: VERDANA; -fx-font-weight: BOLD; -fx-font-size: 20;" text="0">
+            <Label fx:id="nameArea" alignment="TOP_CENTER" layoutX="310.0" layoutY="15.0" prefHeight="213.0" prefWidth="279.0" style="-fx-font-family: VERDANA; -fx-font-weight: BOLD; -fx-font-size: 25;" text=" ">
+                <graphic>
+                    <TableView fx:id="playerTable" prefHeight="214.0" prefWidth="280.0" style="-fx-font-size: 20;">
+                        <placeholder>
+                            <Label text="" />
+                        </placeholder>
+                        <columns>
+                            <TableColumn fx:id="column1" editable="false" minWidth="0.0" prefWidth="140.0" sortable="false" text="Player" />
+                            <TableColumn fx:id="column2" editable="false" prefWidth="139.0" sortType="DESCENDING" text="Points" />
+                        </columns>
+                        <effect>
+                            <DropShadow />
+                        </effect>
+                    </TableView>
+                </graphic>
+            </Label>
+            <Label fx:id="table" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="732.0" layoutY="5.0" prefHeight="90.0" prefWidth="106.0" style="-fx-font-family: VERDANA; -fx-font-weight: bold; -fx-font-size: 22;" text="Points :">
+                <font>
+                    <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                </font></Label>
+            <Label fx:id="point" alignment="TOP_CENTER" layoutX="684.0" layoutY="11.0" prefHeight="40.0" prefWidth="100.0" style="-fx-font-family: VERDANA; -fx-font-weight: BOLD; -fx-font-size: 60;">
                 <font>
                     <Font size="5.0" />
                 </font>
             </Label>
-        </AnchorPane>
-    </GridPane>
-    <GridPane fx:id="gr" layoutX="30.0" layoutY="410.0" prefHeight="44.0" prefWidth="600.0">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="102.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-        <Button fx:id="choice1" mnemonicParsing="false" onAction="#checkResult1" prefHeight="31.0" prefWidth="210.0" style="-fx-font-family: DAYTONA; -fx-font-weight: BOLD; -fx-font-size: 20; -fx-background-color: #2196f3; -fx-text-fill: white;" text="Choice 1" GridPane.halignment="CENTER" />
-        <Button fx:id="choice2" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#checkResult2" prefHeight="31.0" prefWidth="210.0" style="-fx-font-family: DAYTONA; -fx-font-weight: BOLD; -fx-font-size: 20; -fx-background-color: #2196f3; -fx-text-fill: white;" text="Choice 2" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-    </GridPane>
-    <GridPane layoutX="220.0" layoutY="600.0" prefHeight="81.0" prefWidth="404.0">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-        <Button fx:id="generateReport" mnemonicParsing="false" onAction="#showResults" prefHeight="60.0" prefWidth="200.0" style="-fx-font-family: DAYTONA; -fx-font-weight: BOLD; -fx-font-size: 20; -fx-background-color:#2196f3; -fx-text-fill: white;" text="Generate Report" GridPane.halignment="CENTER" />
-    </GridPane>
-    <AnchorPane layoutX="170.0" layoutY="550.0" prefHeight="35.0" prefWidth="500.0">
-        <TextField fx:id="player" onAction="#startThread" prefHeight="41.0" prefWidth="509.0" promptText="Insert your name and press &lt;Enter&gt;" style="-fx-font-size: 20; -fx-font-family: VERDANA;" />
-    </AnchorPane>
-    <TableView layoutX="-232.0" layoutY="24.0" prefHeight="200.0" prefWidth="200.0">
-        <columns>
-            <TableColumn prefWidth="75.0" text="C1" />
-            <TableColumn prefWidth="75.0" text="C2" />
-        </columns>
-    </TableView>
-    <GridPane fx:id="gr1" layoutX="30.0" layoutY="470.0" prefHeight="44.0" prefWidth="600.0">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="98.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-        <children>
-            <Button fx:id="choice4" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#checkResult4" prefHeight="31.0" prefWidth="210.0" style="-fx-font-family: DAYTONA; -fx-font-weight: BOLD; -fx-font-size: 20; -fx-background-color: #2196f3; -fx-text-fill: white;" text="Choice 4" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-            <Button fx:id="choice3" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#checkResult3" prefHeight="31.0" prefWidth="210.0" style="-fx-font-family: DAYTONA; -fx-font-weight: BOLD; -fx-font-size: 20; -fx-background-color: #2196f3; -fx-text-fill: white;" text="Choice 3" GridPane.halignment="CENTER" />
+            <VBox fx:id="start" layoutX="641.0" layoutY="84.0" prefHeight="0.0" prefWidth="0.0" style="-fx-font-family: DAYTONA; -fx-font-weight: BOLD; -fx-font-size: 10; -fx-background-color: laygray; -fx-text-fill: black;">
+                <children>
+                    <Text fx:id="timestamps" style="-fx-font-family: DAYTONA; -fx-font-weight: BOLD; -fx-font-size: 16; -fx-background-color: #2196f3; -fx-text-fill: white;" />
+                </children>
+            </VBox>
+         <AnchorPane layoutX="158.0" layoutY="71.0" prefHeight="130.0" prefWidth="583.0">
+            <children>
+                  <Label fx:id="object1" alignment="CENTER" layoutY="-7.0" prefHeight="138.0" prefWidth="583.0" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="text-field" stylesheets="@../Style/Style.css">
+                      <font>
+                          <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                      </font>
+               </Label>
+            </children>
+         </AnchorPane>
         </children>
-    </GridPane>
+    </AnchorPane>
+
 </AnchorPane>
