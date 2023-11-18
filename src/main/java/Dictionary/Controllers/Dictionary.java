@@ -26,7 +26,7 @@ public class Dictionary implements Initializable {
         searchBtn.setTooltip(tooltip1);
         addBtn.setTooltip(tooltip2);
         translateBtn.setTooltip(tooltip3);
-        searchBtn.setOnAction(event -> showComponent("/View/tempSearch.fxml"));
+        searchBtn.setOnAction(event -> showComponent("/View/SearchUI.fxml"));
         addBtn.setOnAction(event -> showComponent("/View/tempAdd.fxml"));
         translateBtn.setOnAction(event -> showComponent("/View/tempTranslation.fxml"));
         attachBtn.setOnAction(event -> showComponent("/View/ImageTranslateUI.fxml"));
@@ -44,7 +44,7 @@ public class Dictionary implements Initializable {
 
 
         try {
-            showComponent("/View/SearchingUI.fxml");
+            showComponent("/View/SearchUI.fxml");
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
