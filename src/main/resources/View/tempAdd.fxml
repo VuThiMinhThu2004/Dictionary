@@ -9,66 +9,60 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.Addition">
-    <AnchorPane prefHeight="149.0" prefWidth="900.0">
-        <Label layoutX="252.0" layoutY="52.0" snapToPixel="false" text="Insert your own vocabulary!">
-            <font>
-                <Font name="System Bold" size="30.0" />
-            </font>
-        </Label>
-    </AnchorPane>
+    <AnchorPane prefHeight="0.0" prefWidth="900.0" />
 
-    <AnchorPane layoutY="149.0" prefHeight="451.0" prefWidth="900.0">
-        <Label layoutX="45.0" layoutY="14.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="New Word">
+    <AnchorPane layoutX="-14.0" prefHeight="614.0" prefWidth="900.0">
+        <Label layoutX="44.0" layoutY="48.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="New Word">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <TextArea fx:id="Nw" layoutX="209.0" layoutY="14.0" onKeyReleased="#handleAdd" prefHeight="40.0" prefWidth="445.0" promptText="New Word" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" wrapText="true" />
-        <Label layoutX="45.0" layoutY="131.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="Synonym(s)" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="131.0">
+        <TextArea fx:id="Nw" layoutX="209.0" layoutY="48.0" onKeyReleased="#handleAdd" prefHeight="40.0" prefWidth="445.0" promptText="New Word" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" wrapText="true" />
+        <Label layoutX="44.0" layoutY="228.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="Synonym(s)" AnchorPane.leftAnchor="44.0" AnchorPane.topAnchor="228.0">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <TextArea fx:id="Ex" layoutX="45.0" layoutY="242.0" prefHeight="169.0" prefWidth="358.0" promptText="Examples" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
-        <Button fx:id="addBtn" layoutX="387.0" layoutY="411.0" onAction="#HandleClickBtn" prefHeight="53.0" prefWidth="17.0" styleClass="transparent-button">
+        <TextArea fx:id="Ex" layoutX="36.0" layoutY="381.0" prefHeight="169.0" prefWidth="358.0" promptText="Examples" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
+        <Button fx:id="addBtn" layoutX="360.0" layoutY="551.0" onAction="#HandleClickBtn" prefHeight="0.0" prefWidth="35.0" styleClass="transparent-button">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
          <graphic>
-              <ImageView fitHeight="40.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
-                  <Image url="@../IconsThu/Group%202.png" />
+              <ImageView fitHeight="61.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../IconsThu/Group 2.png" />
               </ImageView>
          </graphic>
         </Button>
-        <Label layoutX="45.0" layoutY="74.0" prefHeight="40.0" prefWidth="168.0" snapToPixel="false" text="Part of speech" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="74.0">
+        <Label layoutX="45.0" layoutY="140.0" prefHeight="40.0" prefWidth="168.0" snapToPixel="false" text="Part of speech" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="140.0">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <TextArea fx:id="Pos" layoutX="209.0" layoutY="74.0" prefHeight="40.0" prefWidth="208.0" promptText="Part of speech" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" AnchorPane.leftAnchor="209.0" AnchorPane.topAnchor="74.0" />
-        <Label layoutX="436.0" layoutY="189.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="Meaning" AnchorPane.leftAnchor="436.0" AnchorPane.topAnchor="189.0">
+        <TextArea fx:id="Pos" layoutX="209.0" layoutY="139.0" prefHeight="40.0" prefWidth="208.0" promptText="Part of speech" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" AnchorPane.leftAnchor="209.0" AnchorPane.topAnchor="139.0" />
+        <Label layoutX="444.0" layoutY="341.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="Meaning" AnchorPane.leftAnchor="444.0" AnchorPane.topAnchor="341.0">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <TextArea fx:id="Mn" layoutX="437.0" layoutY="242.0" prefHeight="169.0" prefWidth="358.0" promptText="Meaning" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
-        <Label layoutX="437.0" layoutY="74.0" prefHeight="40.0" prefWidth="161.0" snapToPixel="false" text="Pronunciation" AnchorPane.leftAnchor="437.0" AnchorPane.topAnchor="74.0">
+        <TextArea fx:id="Mn" layoutX="437.0" layoutY="381.0" prefHeight="169.0" prefWidth="358.0" promptText="Meaning" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
+        <Label layoutX="444.0" layoutY="139.0" prefHeight="40.0" prefWidth="161.0" snapToPixel="false" text="Pronunciation" AnchorPane.leftAnchor="444.0" AnchorPane.topAnchor="139.0">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <TextArea fx:id="Pro" layoutX="612.0" layoutY="74.0" prefHeight="40.0" prefWidth="208.0" promptText="Pronunciation" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
-        <TextArea fx:id="Sy" layoutX="209.0" layoutY="131.0" prefHeight="40.0" prefWidth="208.0" promptText="Synonym" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
-        <Label layoutX="45.0" layoutY="189.0" prefHeight="40.0" prefWidth="168.0" snapToPixel="false" text="Example" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="189.0">
+        <TextArea fx:id="Pro" layoutX="612.0" layoutY="139.0" prefHeight="40.0" prefWidth="208.0" promptText="Pronunciation" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
+        <TextArea fx:id="Sy" layoutX="209.0" layoutY="228.0" prefHeight="40.0" prefWidth="208.0" promptText="Synonym" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
+        <Label layoutX="45.0" layoutY="341.0" prefHeight="40.0" prefWidth="168.0" snapToPixel="false" text="Example" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="341.0">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <Label layoutX="437.0" layoutY="131.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="Antonym(s)" AnchorPane.leftAnchor="437.0" AnchorPane.topAnchor="131.0">
+        <Label layoutX="444.0" layoutY="228.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="Antonym(s)" AnchorPane.leftAnchor="444.0" AnchorPane.topAnchor="228.0">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <TextArea fx:id="An" layoutX="612.0" layoutY="131.0" prefHeight="40.0" prefWidth="208.0" promptText="Antonym" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
+        <TextArea fx:id="An" layoutX="612.0" layoutY="228.0" prefHeight="40.0" prefWidth="208.0" promptText="Antonym" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
     </AnchorPane>
 </AnchorPane>
