@@ -15,7 +15,7 @@
          <Image url="@../IconsThu/Group 15.png" />
       </image>
    </ImageView>
-    <AnchorPane fx:id="container" layoutX="63.0" layoutY="81.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: transfer;" styleClass="definition-wrapper" stylesheets="@../Style/Style.css" />
+    <AnchorPane fx:id="container" layoutX="63.0" layoutY="81.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: transfer;" />
     <Button fx:id="addBtn" graphicTextGap="5.0" layoutX="-109.0" layoutY="155.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" styleClass="transparent-button" stylesheets="@../Style/Style.css">
         <font>
             <Font name="Berlin Sans FB Demi Bold" size="15.0" />

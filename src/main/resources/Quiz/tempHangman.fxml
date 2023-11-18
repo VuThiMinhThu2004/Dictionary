@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="833.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Hangman.Controller">
+<AnchorPane prefHeight="600.0" prefWidth="833.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Hangman.Controller">
     <children>
         <AnchorPane fx:id="base1" layoutX="498.0" layoutY="181.0" prefHeight="104.0" prefWidth="37.0">
             <children>
