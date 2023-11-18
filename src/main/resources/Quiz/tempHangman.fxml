@@ -20,7 +20,7 @@
         </AnchorPane>
         <AnchorPane fx:id="base2" layoutX="440.0" layoutY="182.0" prefHeight="80.0" prefWidth="78.0">
             <children>
-                <Line endX="105.40866088867188" endY="-3.0517578125E-5" layoutX="-25.0" layoutY="37.0" rotate="-40.0" startX="38.62060546875" startY="15.139155387878418" style="-fx-stroke: #000000;" />
+                <Line endX="112.22540283203125" endY="-2.3612520694732666" layoutX="-25.0" layoutY="37.0" rotate="-40.0" startX="38.62060546875" startY="15.139155387878418" style="-fx-stroke: #000000;" />
             </children>
         </AnchorPane>
         <AnchorPane fx:id="base3" layoutX="500.0" layoutY="174.0" prefHeight="104.0" prefWidth="78.0">
@@ -64,130 +64,130 @@
                 <Circle fill="TRANSPARENT" layoutX="49.0" layoutY="24.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: #000000;" />
             </children>
         </AnchorPane>
-        <FlowPane fx:id="buttons" hgap="7.0" layoutX="11.0" layoutY="265.0" prefHeight="241.0" prefWidth="327.0" vgap="7.0">
+        <FlowPane fx:id="buttons" hgap="7.0" layoutX="205.0" layoutY="382.0" prefHeight="137.0" prefWidth="420.0" style="-fx-border-color: #1D5D9B;" styleClass="container" stylesheets="@../Style/Style.css" vgap="7.0">
             <children>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="A">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="A">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="B">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="B">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="C">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="C">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="D">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="D">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="E">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="E">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="F">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="F">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="G">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="G">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="H">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="H">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="I">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="I">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="J">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="J">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="K">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="K">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="L">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="L">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="M">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="M">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="N">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="N">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="O">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="O">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="P">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="P">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="Q">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="Q">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="R">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="R">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="S">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="S">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="T">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="T">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="U">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="U">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="V">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="V">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="W">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="W">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="X">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="X">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="Y">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="Y">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
-                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #33EECF;" text="Z">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#onClick" prefHeight="40.0" prefWidth="36.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="Z">
                     <font>
                         <Font size="15.0" />
                     </font></Button>
             </children>
         </FlowPane>
-        <Text fx:id="text" layoutX="36.0" layoutY="192.0" stroke="TRANSPARENT" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="338.1285705566406">
+        <Text fx:id="text" layoutX="101.0" layoutY="246.0" stroke="TRANSPARENT" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="338.1285705566406">
             <font>
                 <Font size="50.0" />
             </font>
         </Text>
-        <Text fx:id="winStatus" layoutX="378.0" layoutY="346.0" strokeWidth="0.0" wrappingWidth="434.70947265625">
+        <Text fx:id="winStatus" layoutX="53.0" layoutY="131.0" strokeWidth="0.0" wrappingWidth="434.70947265625">
             <font>
                 <Font size="75.0" />
             </font>
         </Text>
-        <Text fx:id="realWord" layoutX="337.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="483.0">
+        <Text fx:id="realWord" layoutX="174.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="483.0">
             <font>
                 <Font size="30.0" />
             </font>
         </Text>
-        <Button focusTraversable="false" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#newGame" style="-fx-background-color: #1D5D9B;" text="New Game" textFill="WHITE">
+        <Button focusTraversable="false" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#newGame" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-effect: #000000;" styleClass="edit-button" stylesheets="@../Style/Style.css" text="New Game">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
