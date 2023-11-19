@@ -43,7 +43,7 @@
             </AnchorPane>
         </AnchorPane>
         <AnchorPane layoutX="360.0" prefHeight="470.0" prefWidth="525.0" style="-fx-background-color: #FFFFFF;">
-            <AnchorPane layoutY="60.0" prefHeight="390.0" prefWidth="522.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../Style/Style.css">
+            <AnchorPane layoutY="-2.0" prefHeight="452.0" prefWidth="522.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../Style/Style.css">
                 <AnchorPane prefHeight="57.0" prefWidth="522.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../Style/Style.css">
                     <Button layoutX="476.0" layoutY="13.0" mnemonicParsing="false" onAction="#speakWord" prefHeight="32.0" prefWidth="6.0" styleClass="transparent-button" wrapText="true">
                         <tooltip>
@@ -81,7 +81,7 @@
                         </font>
                     </Label>
                 </AnchorPane>
-                <TextArea fx:id="wordDefinition" editable="false" layoutY="58.0" prefHeight="328.0" prefWidth="505.0" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="definition-text" stylesheets="@../Style/Frame1.css" wrapText="true" />
+                <TextArea fx:id="wordDefinition" editable="false" layoutY="69.0" prefHeight="380.0" prefWidth="506.0" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="definition-text" stylesheets="@../Style/Frame1.css" wrapText="true" />
             </AnchorPane>
         </AnchorPane>
     </AnchorPane>
