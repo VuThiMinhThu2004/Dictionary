@@ -11,8 +11,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffdbaa; -fx-border-color: #000000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.Searching">
-    <AnchorPane prefHeight="144.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" styleClass="definition-text" stylesheets="@../Style/Style.css">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.Searching">
+    <AnchorPane prefHeight="144.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../Style/Style.css">
         <AnchorPane layoutX="180.0" layoutY="23.0" prefHeight="50.0" prefWidth="540.0" style="-fx-effect: #1D5D9B; -fx-border-color: #1D5D9B;" styleClass="search-box" stylesheets="@../Style/Style.css">
             <TextField fx:id="searchBox" layoutX="47.0" layoutY="2.0" onKeyReleased="#handleSearch" prefHeight="43.0" prefWidth="240.0" promptText="Type the word..." styleClass="text-field">
                 <font>
@@ -31,8 +31,8 @@
             </Label>
         </AnchorPane>
     </AnchorPane>
-    <AnchorPane layoutY="144.0" prefHeight="463.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" styleClass="border" stylesheets="@../Style/Style.css">
-        <AnchorPane layoutX="14.0" prefHeight="470.0" prefWidth="311.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../Style/Style.css">
+    <AnchorPane layoutY="144.0" prefHeight="456.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../Style/Style.css">
+        <AnchorPane layoutX="14.0" prefHeight="450.0" prefWidth="326.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../Style/Style.css">
             <ListView fx:id="searchResultsListView" layoutX="19.0" layoutY="67.0" prefHeight="380.0" prefWidth="287.0" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" />
             <AnchorPane prefHeight="57.0" prefWidth="311.0">
                 <Label fx:id="countRes" layoutX="14.0" layoutY="4.0" prefHeight="57.0" prefWidth="311.0" style="-fx-background-color: #FFFFFF;">
@@ -42,7 +42,7 @@
                 </Label>
             </AnchorPane>
         </AnchorPane>
-        <AnchorPane layoutX="360.0" prefHeight="470.0" prefWidth="525.0" style="-fx-background-color: #FFFFFF;">
+        <AnchorPane layoutX="360.0" prefHeight="447.0" prefWidth="514.0" style="-fx-background-color: #FFFFFF;">
             <AnchorPane layoutY="-2.0" prefHeight="452.0" prefWidth="522.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../Style/Style.css">
                 <AnchorPane prefHeight="57.0" prefWidth="522.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../Style/Style.css">
                     <Button layoutX="476.0" layoutY="13.0" mnemonicParsing="false" onAction="#speakWord" prefHeight="32.0" prefWidth="6.0" styleClass="transparent-button" wrapText="true">

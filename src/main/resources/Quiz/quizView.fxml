@@ -11,14 +11,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.QuizGame.MainController">
-    <AnchorPane prefHeight="0.0" prefWidth="900.0" stylesheets="@../Style/Style.css" />
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.QuizGame.MainController">
+    <AnchorPane prefHeight="0.0" prefWidth="900.0" />
 
-    <AnchorPane prefHeight="627.0" prefWidth="900.0" stylesheets="@../Style/Style.css">
+    <AnchorPane prefHeight="627.0" prefWidth="900.0">
         <children>
             <AnchorPane layoutX="786.0" layoutY="498.0" prefHeight="100.0" prefWidth="100.0">
                 <children>
-                    <Label alignment="CENTER" layoutY="3.0" prefHeight="22.0" prefWidth="103.0" text="Countdown">
+                    <Label alignment="CENTER" layoutY="3.0" prefHeight="22.0" prefWidth="103.0">
                         <font>
                             <Font name="System Bold" size="18.0" />
                         </font>
@@ -92,7 +92,7 @@
                     </TableView>
                 </graphic>
             </Label>
-            <Label fx:id="table" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="732.0" layoutY="5.0" prefHeight="90.0" prefWidth="106.0" style="-fx-font-family: VERDANA; -fx-font-weight: bold; -fx-font-size: 22;" text="Points :">
+            <Label fx:id="table" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="732.0" layoutY="5.0" prefHeight="90.0" prefWidth="106.0" style="-fx-font-family: VERDANA; -fx-font-weight: bold; -fx-font-size: 22;">
                 <font>
                     <Font name="Berlin Sans FB Demi Bold" size="12.0" />
                 </font></Label>
