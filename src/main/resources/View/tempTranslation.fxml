@@ -16,8 +16,8 @@
     </Pane>
 
     <AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="border">
-        <Pane prefHeight="0.0" prefWidth="834.0" />
-        <Pane prefHeight="600.0" prefWidth="900.0" styleClass="definition-wrapper">
+        <Pane prefHeight="0.0" prefWidth="834.0" style="-fx-background-color: #ffffff;" />
+        <Pane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" styleClass="definition-wrapper">
             <TextArea fx:id="SourceLanguage" layoutX="34.0" layoutY="93.0" onKeyReleased="#translateWord" prefHeight="477.0" prefWidth="400.0" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="definition-wrapper" stylesheets="@../Style/Style.css" wrapText="true" />
             <TextArea fx:id="TranslationLanguage" editable="false" layoutX="467.0" layoutY="93.0" prefHeight="477.0" prefWidth="400.0" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="definition-wrapper" stylesheets="@../Style/Style.css" wrapText="true" />
             <Pane layoutX="131.0" layoutY="30.0" prefHeight="49.0" prefWidth="638.0" stylesheets="@../Style/Style.css">
