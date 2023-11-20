@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
@@ -12,24 +14,35 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.LoginCon">
    <left>
-      <AnchorPane prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: #1D5D9B;" BorderPane.alignment="CENTER" />
-   </left>
-   <right>
-      <AnchorPane prefHeight="750.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: #1D5D9B;" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="usernameField" layoutX="190.0" layoutY="310.0" prefHeight="40.0" prefWidth="250.0" promptText="User Name" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
-            <PasswordField fx:id="passwordField" layoutX="190.0" layoutY="374.0" prefHeight="40.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
-            <Button fx:id="Login" layoutX="265.0" layoutY="457.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="89.0" style="-fx-background-color: #0598ff;" text="Login" textFill="WHITE">
+            <ImageView fitHeight="750.0" fitWidth="431.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../IconsThu/logo3.jpeg" />
+            </ImageView>
+            <Text fill="WHITE" layoutX="60.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DUCKLINGO">
                <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Text fill="#0598ff" layoutX="260.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login" wrappingWidth="117.70550537109375">
-               <font>
-                  <Font name="System Bold" size="22.0" />
+                  <Font name="Arial Rounded MT Bold" size="34.0" />
                </font>
             </Text>
-            <Hyperlink fx:id="no_acc" layoutX="260.0" layoutY="509.0" text="No account?">
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="750.0" prefWidth="600.0" style="-fx-background-color: ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="usernameField" layoutX="190.0" layoutY="300.0" prefHeight="40.0" prefWidth="250.0" promptText="User Name" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="passwordField" layoutX="190.0" layoutY="355.0" prefHeight="40.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="Login" layoutX="264.0" layoutY="428.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="89.0" style="-fx-background-color: #0598ff;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Text fill="#0598ff" fontSmoothingType="LCD" layoutX="215.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login" wrappingWidth="200.90557861328125">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Text>
+            <Hyperlink fx:id="no_acc" layoutX="237.0" layoutY="486.0" text="Create new account?">
                <font>
                   <Font size="16.0" />
                </font></Hyperlink>

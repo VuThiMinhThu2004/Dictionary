@@ -88,7 +88,7 @@
         <graphic>
             <ImageView fitHeight="45.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
                 <image>
-                    <Image url="@../IconsThu/Group%205.png" />
+                    <Image url="@../IconsThu/Group 5.png" />
                 </image>
             <effect>
                <DropShadow />
@@ -106,7 +106,7 @@
         <graphic>
             <ImageView fitHeight="45.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
                 <image>
-                    <Image url="@../IconsThu/Group%203.png" />
+                    <Image url="@../IconsThu/Group 3.png" />
                 </image>
             <effect>
                <DropShadow />
@@ -124,7 +124,7 @@
         <graphic>
             <ImageView fitHeight="45.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
                 <image>
-                    <Image url="@../IconsThu/Group%201.png" />
+                    <Image url="@../IconsThu/Group 1.png" />
                 </image>
             <effect>
                <DropShadow />
@@ -132,9 +132,9 @@
             </ImageView>
         </graphic>
     </Button>
-   <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="329.0" layoutY="22.0" prefHeight="50.0" prefWidth="342.0" text="MyDictionary" textAlignment="CENTER" wrapText="true">
+   <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="329.0" layoutY="22.0" prefHeight="50.0" prefWidth="342.0" text="DUCKLINGO" textAlignment="CENTER" textFill="#0174be" wrapText="true">
       <font>
-         <Font name="System Bold" size="40.0" />
+         <Font name="Arial Rounded MT Bold" size="40.0" />
       </font>
    </Label>
 </AnchorPane>

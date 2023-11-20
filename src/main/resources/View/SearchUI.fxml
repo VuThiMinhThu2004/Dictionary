@@ -81,7 +81,7 @@
                         </font>
                     </Label>
                 </AnchorPane>
-                <TextArea fx:id="wordDefinition" editable="false" layoutY="69.0" prefHeight="430.0" prefWidth="506.0" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B; -fx-background-color: #ffffff;" styleClass="definition-text" stylesheets="@../Style/Frame1.css" wrapText="true" />
+                <TextArea fx:id="wordDefinition" editable="false" layoutY="69.0" prefHeight="430.0" prefWidth="506.0" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B; -fx-background-color: #ffffff;" styleClass="definition-text" stylesheets="@../Style/Style.css" wrapText="true" />
             </AnchorPane>
         </AnchorPane>
     </AnchorPane>
