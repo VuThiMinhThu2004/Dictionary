@@ -137,4 +137,26 @@
          <Font name="Arial Rounded MT Bold" size="40.0" />
       </font>
    </Label>
+   <Button fx:id="quoteBtn" graphicTextGap="5.0" layoutX="-145.0" layoutY="356.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="85.0" styleClass="transparent-button" stylesheets="@../Style/Style.css">
+      <tooltip>
+         <Tooltip fx:id="tooltip5" text="Quiz">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Tooltip>
+      </tooltip>
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+      <graphic>
+         <ImageView fitHeight="45.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../IconsThu/Group%208.png" />
+            </image>
+            <effect>
+               <DropShadow />
+            </effect>
+         </ImageView>
+      </graphic>
+   </Button>
 </AnchorPane>

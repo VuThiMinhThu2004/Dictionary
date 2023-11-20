@@ -36,19 +36,14 @@
                         <Font name="Arial Rounded MT Bold" size="20.0" />
                     </font>
                 </Button>
-                <Text fx:id="label" fill="#0598ff" layoutX="197.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User SignUp" wrappingWidth="236.10540771484375">
+                <Text fx:id="label" fill="#0598ff" layoutX="243.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up" wrappingWidth="144.10540771484375">
                     <font>
                         <Font name="Arial Rounded MT Bold" size="36.0" />
                     </font>
                 </Text>
-            <Text fill="#0598ff" layoutX="182.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already a member?">
+            <Hyperlink fx:id="login" layoutX="215.0" layoutY="519.0" text="Already a member? Log in" textFill="#0598ff" textOverrun="CLIP">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="20.0" />
-               </font>
-            </Text>
-            <Hyperlink fx:id="login" layoutX="380.0" layoutY="513.0" text="Log In!" textFill="#0598ff" textOverrun="CLIP">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="20.0" />
+                  <Font size="16.0" />
                </font>
             </Hyperlink>
             </children>
