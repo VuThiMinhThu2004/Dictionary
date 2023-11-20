@@ -5,6 +5,8 @@
 
  ## Tính năng chính:
  - Tính năng đăng ký, đăng nhập để cá nhân hóa trải nghiệm cho người dùng
+
+ ![image](https://github.com/VuThiMinhThu2004/Dictionary/assets/124875538/8f2403bc-b8e8-467a-b0df-972f8065db6d)
    
  - Tra hơn 100000 từ tiếng Anh khác nhau, có thể thực hiện các thao tác như tra nhanh bằng nháy đúp chuột,...
 
