@@ -23,21 +23,18 @@ public class Translation {
     public TextArea TranslationLanguage;
     @FXML
     public Button recordButton = new Button();
-//
+
     private int count = 0;
     @FXML
     private ComboBox<String> sourceLanguageComboBox;
     @FXML
     private ComboBox<String> targetLanguageComboBox;
-//
-//
+
     @FXML
     public void initialize() {
         SourceLanguage.setWrapText(true);
-        SourceLanguage.setStyle("-fx-font-size: 19px; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-image: url(/Images/Background.png);");
-
         TranslationLanguage.setWrapText(true);
-        TranslationLanguage.setStyle("-fx-font-size: 19px; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-image: url(/Images/Background.png);");
+
         sourceLanguageComboBox.getItems().addAll(languages);
         targetLanguageComboBox.getItems().addAll(languages);
 
@@ -47,8 +44,7 @@ public class Translation {
         sourceLanguageComboBox.setOnAction(e -> updateTargetLanguageOptions());
         targetLanguageComboBox.setOnAction(e -> updateSourceLanguageOptions());
     }
-//
-//
+
     @FXML
     public void translateWord() {
         String sourceLanguage = getLanguageCode(sourceLanguageComboBox.getValue());

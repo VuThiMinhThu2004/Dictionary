@@ -43,11 +43,11 @@ public class Dictionary implements Initializable {
         tooltip7.setShowDelay(Duration.seconds(0.1));
 
 
-        try {
-            showComponent("/View/SearchUI.fxml");
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
+//        try {
+//            showComponent("/View/SearchUI.fxml");
+//        } catch (Exception e) {
+//            System.err.println(e.getMessage());
+//        }
 
         exitBtn.setOnMouseClicked(e -> System.exit(0));
     }

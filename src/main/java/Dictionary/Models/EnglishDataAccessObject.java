@@ -273,7 +273,7 @@ public class EnglishDataAccessObject extends BaseDaoImpl<English, Long> {
     }
     public static List<English> getAllWords() throws SQLException {
         List<English> x = new ArrayList<>();
-              return x;
+        return x;
     }
 
     public String renderDefinition(English english) {
