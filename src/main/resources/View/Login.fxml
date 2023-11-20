@@ -9,22 +9,22 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <AnchorPane prefHeight="700.0" prefWidth="400.0" style="-fx-background-color: #1D5D9B;" BorderPane.alignment="CENTER" />
    </left>
    <right>
-      <AnchorPane prefHeight="700.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="750.0" prefWidth="603.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="usernameField" layoutX="81.0" layoutY="310.0" prefHeight="40.0" prefWidth="250.0" promptText="User Name" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
-            <PasswordField fx:id="passwordField" layoutX="81.0" layoutY="374.0" prefHeight="40.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
-            <Button fx:id="Login" layoutX="160.0" layoutY="457.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="89.0" style="-fx-background-color: #0598ff;" text="Login" textFill="WHITE">
+            <TextField fx:id="usernameField" layoutX="206.0" layoutY="308.0" prefHeight="40.0" prefWidth="250.0" promptText="User Name" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="passwordField" layoutX="206.0" layoutY="375.0" prefHeight="40.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #000000; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="Login" layoutX="286.0" layoutY="455.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="89.0" style="-fx-background-color: transparent; -fx-border-color: #000000;" text="Login">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Hyperlink fx:id="no_acc" layoutX="144.0" layoutY="509.0" text="Forgot the password?" />
-            <Text fill="#0598ff" layoutX="144.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login" wrappingWidth="117.70550537109375">
+            <Hyperlink fx:id="no_acc" layoutX="280.0" layoutY="510.0" text="Forgot password?" />
+            <Text layoutX="178.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to MyDictionary" wrappingWidth="306.50543212890625">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
