@@ -47,7 +47,7 @@
                 <AnchorPane layoutY="14.0" prefHeight="57.0" prefWidth="522.0">
                     <Button layoutX="457.0" layoutY="19.0" mnemonicParsing="false" onAction="#speakWord" prefHeight="29.0" prefWidth="2.0" styleClass="normal-button" wrapText="true">
                         <tooltip>
-                            <Tooltip fx:id="tooltip1" text="Phonetic" />
+                            <Tooltip fx:id="tooltip1" text="Use it to here words" />
                         </tooltip>
                         <graphic>
                             <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
@@ -57,7 +57,7 @@
                     </Button>
                     <Button layoutX="414.0" layoutY="19.0" mnemonicParsing="false" onAction="#deleteWord" prefHeight="29.0" prefWidth="29.0" styleClass="normal-button" wrapText="true">
                         <tooltip>
-                            <Tooltip fx:id="tooltip2" text="Delete Word" />
+                            <Tooltip fx:id="tooltip2" text="Use it to delete words" />
                         </tooltip>
                         <graphic>
                             <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
@@ -67,7 +67,7 @@
                     </Button>
                     <Button layoutX="371.0" layoutY="19.0" mnemonicParsing="false" onAction="#updateWord" prefHeight="32.0" prefWidth="9.0" styleClass="normal-button" wrapText="true">
                         <tooltip>
-                            <Tooltip fx:id="tooltip3" text="Update Word" />
+                            <Tooltip fx:id="tooltip3" text="Use this to modify words" />
                         </tooltip>
                   <graphic>
                           <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
