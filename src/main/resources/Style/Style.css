@@ -126,7 +126,7 @@
 }
 
 .list-cell {
-    -fx-text-fill: #8b4513; /* saddle brown */
+    -fx-text-fill:  #ffffff; /* saddle brown */
     -fx-font-size: 16;
     -fx-font-weight: 700;
     -fx-padding: 5;
@@ -142,17 +142,17 @@
 }
 
 .list-cell:even {
-    -fx-background-color: #f8e6c8; /* eggshell */
+    -fx-background-color: #272829; /* eggshell */
 }
 
 .list-cell:odd {
-    -fx-background-color: #f2deb4; /* old paper */
+    -fx-background-color: #61677A; /* old paper */
 }
 
 .list-cell:filled:hover,
 .list-cell:filled:selected {
-    -fx-background-color: linear-gradient(to bottom left, #f2deb4, #8b4513); /* old paper, saddle brown */
-    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #0C356A, #0174BE); /* Gradient màu nền từ trái sang phải */
+    -fx-text-fill: white; /* Màu chữ */
 }
 
 .transparent {
@@ -163,7 +163,33 @@
     -fx-background-color: transparent;
     -fx-background-radius: 0;
     -fx-padding: 0;
+    -fx-translate-x: 0;
+    -fx-transition: -fx-translate-x 0.3s;
 }
+
+.transparent-button:hover {
+    -fx-translate-x: 140px; /* Đưa tọa độ x về 0 khi di chuột vào */
+}
+
+.combo-box .list-cell:even {
+    -fx-background-color: #0C356A; /* Màu của cell chẵn */
+    -fx-text-fill: white; /* Màu chữ của cell chẵn */
+}
+
+.combo-box .list-cell:odd {
+    -fx-background-color: #0174BE; /* Màu của cell lẻ */
+    -fx-text-fill: white; /* Màu chữ của cell lẻ */
+}
+
+.combo-box .list-cell:even:hover,
+.combo-box .list-cell:odd:hover {
+    -fx-background-color: linear-gradient(#132043, #1F4172); /* Màu nền khi hover */
+}
+
+.combo-box .list-cell:selected {
+    -fx-background-color: linear-gradient(#132043, #1F4172); /* Màu nền khi được chọn */
+}
+
 
 .success-alert{
     -fx-font-size: 14px;
@@ -185,6 +211,14 @@
 .border {
     -fx-background-color: #de9d6f;
 }
+
+.normal-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white; /* Set the text color */
+    -fx-shape: "M 25 25 m -25 0 a 25 25 0 1 1 50 0 a 25 25 0 1 1 -50 0"; /* This defines the circle shape */
+
+}
+
 .transparent-button {
     -fx-background-color: transparent;
     -fx-text-fill: white; /* Set the text color */

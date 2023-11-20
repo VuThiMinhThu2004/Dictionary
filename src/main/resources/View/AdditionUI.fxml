@@ -8,72 +8,61 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="605.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.Addition">
-    <AnchorPane prefHeight="144.0" prefWidth="833.0" styleClass="definition-wrapper" stylesheets="@../Style/Style.css">
-        <Label layoutX="237.0" layoutY="55.0" snapToPixel="false" text="Insert your own vocabulary!">
-            <font>
-                <Font name="Berlin Sans FB Demi Bold" size="29.0" />
-            </font>
-        </Label>
-        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../Images/icons8-language-64 (1).png" />
-        </ImageView>
-        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="720.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../Images/icons8-language-64.png" />
-        </ImageView>
-    </AnchorPane>
-    <AnchorPane layoutX="-1.0" layoutY="144.0" prefHeight="463.0" prefWidth="834.0" styleClass="border" stylesheets="@../Style/Style.css">
-        <Label layoutX="32.0" layoutY="14.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="New Word">
-            <font>
-                <Font name="Berlin Sans FB Demi Bold" size="20.0" />
-            </font>
-        </Label>
-        <TextArea fx:id="Nw" layoutX="194.0" layoutY="14.0" onKeyReleased="#handleAdd" prefHeight="40.0" prefWidth="445.0" promptText="New Word" styleClass="title" wrapText="true" />
-        <Label layoutX="33.0" layoutY="131.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="Synonym(s)" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="131.0">
-            <font>
-                <Font name="Berlin Sans FB Demi Bold" size="20.0" />
-            </font>
-        </Label>
-        <TextArea fx:id="Ex" layoutX="29.0" layoutY="242.0" prefHeight="169.0" prefWidth="358.0" promptText="Examples" styleClass="title" wrapText="true" />
-        <Button fx:id="addBtn" layoutX="387.0" layoutY="411.0" onAction="#HandleClickBtn" prefHeight="50.0" prefWidth="50.0" styleClass="transparent-button">
+<AnchorPane prefHeight="567.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.Addition">
+    <AnchorPane prefHeight="0.0" prefWidth="900.0" />
+
+    <AnchorPane prefHeight="570.0" prefWidth="900.0">
+        <Label layoutX="44.0" layoutY="48.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="New Word">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
+        </Label>
+        <TextArea fx:id="Nw" layoutX="209.0" layoutY="48.0" onKeyReleased="#handleAdd" prefHeight="40.0" prefWidth="445.0" promptText="New Word" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" wrapText="true" />
+        <Label layoutX="44.0" layoutY="228.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="Synonym(s)" AnchorPane.leftAnchor="44.0" AnchorPane.topAnchor="228.0">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="Ex" layoutX="14.0" layoutY="371.0" prefHeight="169.0" prefWidth="358.0" promptText="Examples" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
+        <Button fx:id="addBtn" layoutX="432.0" layoutY="541.0" onAction="#HandleClickBtn" prefHeight="0.0" prefWidth="35.0" style="-fx-background-color: #ffffff; -fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="save-button" stylesheets="@../Style/Style.css">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+         <graphic>
+              <ImageView fitHeight="31.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../IconsThu/plus-circle%20(1).png" />
+              </ImageView>
+         </graphic>
         </Button>
-        <Label layoutX="33.0" layoutY="74.0" prefHeight="40.0" prefWidth="168.0" snapToPixel="false" text="Part of speech" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="74.0">
+        <Label layoutX="45.0" layoutY="140.0" prefHeight="40.0" prefWidth="168.0" snapToPixel="false" text="Part of speech" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="140.0">
             <font>
-                <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <TextArea fx:id="Pos" layoutX="193.0" layoutY="74.0" prefHeight="40.0" prefWidth="208.0" promptText="Part of speech" styleClass="title" wrapText="true" AnchorPane.leftAnchor="193.0" AnchorPane.topAnchor="74.0" />
-        <Label layoutX="432.0" layoutY="189.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="Meaning" AnchorPane.leftAnchor="432.0" AnchorPane.topAnchor="189.0">
+        <TextArea fx:id="Pos" layoutX="209.0" layoutY="139.0" prefHeight="40.0" prefWidth="208.0" promptText="Part of speech" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" AnchorPane.leftAnchor="209.0" AnchorPane.topAnchor="139.0" />
+        <Label layoutX="676.0" layoutY="331.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="Meaning" AnchorPane.leftAnchor="676.0" AnchorPane.topAnchor="331.0">
             <font>
-                <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <TextArea fx:id="Mn" layoutX="433.0" layoutY="242.0" prefHeight="169.0" prefWidth="358.0" promptText="Meaning" styleClass="title" wrapText="true" />
-        <Label layoutX="433.0" layoutY="74.0" prefHeight="40.0" prefWidth="161.0" snapToPixel="false" text="Pronunciation" AnchorPane.leftAnchor="433.0" AnchorPane.topAnchor="74.0">
+        <TextArea fx:id="Mn" layoutX="527.0" layoutY="371.0" prefHeight="169.0" prefWidth="358.0" promptText="Meaning" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
+        <Label layoutX="467.0" layoutY="140.0" prefHeight="40.0" prefWidth="161.0" snapToPixel="false" text="Pronunciation" AnchorPane.leftAnchor="467.0" AnchorPane.topAnchor="140.0">
             <font>
-                <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <TextArea fx:id="Pro" layoutX="594.0" layoutY="74.0" prefHeight="40.0" prefWidth="208.0" promptText="Pronunciation" styleClass="title" wrapText="true" />
-        <TextArea fx:id="Sy" layoutX="193.0" layoutY="131.0" prefHeight="40.0" prefWidth="208.0" promptText="Synonym" styleClass="title" wrapText="true" />
-        <Label layoutX="33.0" layoutY="189.0" prefHeight="40.0" prefWidth="168.0" snapToPixel="false" text="Example" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="189.0">
+        <TextArea fx:id="Pro" layoutX="612.0" layoutY="139.0" prefHeight="40.0" prefWidth="208.0" promptText="Pronunciation" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
+        <TextArea fx:id="Sy" layoutX="209.0" layoutY="228.0" prefHeight="40.0" prefWidth="208.0" promptText="Synonym" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
+        <Label layoutX="145.0" layoutY="332.0" prefHeight="40.0" prefWidth="168.0" snapToPixel="false" text="Example" AnchorPane.leftAnchor="145.0" AnchorPane.topAnchor="332.0">
             <font>
-                <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <Label layoutX="433.0" layoutY="131.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="Antonym(s)" AnchorPane.leftAnchor="433.0" AnchorPane.topAnchor="131.0">
+        <Label layoutX="467.0" layoutY="228.0" prefHeight="40.0" prefWidth="143.0" snapToPixel="false" text="Antonym(s)" AnchorPane.leftAnchor="467.0" AnchorPane.topAnchor="228.0">
             <font>
-                <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <TextArea fx:id="An" layoutX="594.0" layoutY="131.0" prefHeight="40.0" prefWidth="208.0" promptText="Antonym" styleClass="title" wrapText="true" />
-        <ImageView fitHeight="40.0" fitWidth="67.0" layoutX="392.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../Images/icons8-add-100.png" />
-        </ImageView>
+        <TextArea fx:id="An" layoutX="612.0" layoutY="228.0" prefHeight="40.0" prefWidth="208.0" promptText="Antonym" style="-fx-border-color: #1D5D9B; -fx-effect: #1D5D9B;" styleClass="title" stylesheets="@../Style/Style.css" wrapText="true" />
     </AnchorPane>
-
-
 </AnchorPane>

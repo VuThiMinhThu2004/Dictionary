@@ -13,7 +13,6 @@ public class EncodingService {
     }
 
 
-    // Decode base64 từ server trả về thành ảnh lưu tên result.jpeg
     public static void base64ToImage(String base64Image) throws IOException {
         byte[] decodedBytes = Base64.getDecoder().decode(base64Image);
         Files.write(Paths.get("result.png"), decodedBytes);

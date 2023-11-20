@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="605.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dictionary.Controllers.ImageTranslation">
+    <AnchorPane prefHeight="0.0" prefWidth="834.0" />
+    <Pane prefHeight="607.0" prefWidth="835.0">
+        <Text layoutX="274.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a picture to translate">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Text>
+        <Text layoutX="251.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upload only .jpg, jpeg or .png file">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Text>
+        <Button fx:id="chooseImageButton" layoutX="315.0" layoutY="331.0" mnemonicParsing="false" onAction="#HandleFile" style="-fx-background-color: #ffffff; -fx-border-color: #000000;" text="Browse your files">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Button>
+        <ProgressIndicator fx:id="progressIndicator" layoutX="400.0" layoutY="50.0" prefHeight="53.0" prefWidth="157.0" visible="false" />
+    </Pane>
+</AnchorPane>

@@ -18,7 +18,6 @@ public class WavTranslationService {
 
     static {
         try {
-            // Flask server connection string
             SERVER_URL = new URL("http://127.0.0.1:5000");
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
