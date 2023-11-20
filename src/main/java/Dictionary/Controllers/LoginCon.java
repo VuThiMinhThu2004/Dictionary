@@ -1,13 +1,22 @@
 package Dictionary.Controllers;
 
+import Utils.DB;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
-public class LoginCon{
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class LoginCon implements Initializable {
 
     @FXML
     private Button Login;
+
+    @FXML
+    private Hyperlink forgot_pw;
 
     @FXML
     private Hyperlink no_acc;
@@ -19,11 +28,27 @@ public class LoginCon{
     private TextField usernameField;
 
     @FXML
-    private void initialize() {
-        // Khởi tạo controller (có thể thực hiện các công việc chuẩn bị ở đây)
-        // Ví dụ: thiết lập các giá trị mặc định hoặc khởi động các thành phần
+    private Label label_welcome;
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        Login.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                DB.logInUser(event, usernameField.getText(), passwordField.getText());
+            }
+        });
+
+        no_acc.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                DB.changeScene(event, "/View/SignUp.fxml", "Sign Up!", null);
+            }
+        });
     }
 
+    public void setUserInformation(String username) {
+        label_welcome.setText("Welcome " + username + "!");
+    }
     @FXML
     private void handleLogin(ActionEvent event) {
         String username = usernameField.getText();
@@ -54,4 +79,6 @@ public class LoginCon{
         alert.setContentText(content);
         alert.showAndWait();
     }
+
+
 }
