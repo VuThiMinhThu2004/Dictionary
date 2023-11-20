@@ -59,16 +59,7 @@ public class MyThread implements Runnable {
                     bt4.setText(FileInput.objectsList5().get(finalI));
                 });
 
-//                Platform.runLater(() -> clock.setText("10"));
-//                Thread.sleep(1000);
-//                Platform.runLater(() -> clock.setText("9"));
-//                Thread.sleep(1000);
-//                Platform.runLater(() -> clock.setText("8"));
-//                Thread.sleep(1000);
-//                Platform.runLater(() -> clock.setText("7"));
-//                Thread.sleep(1000);
-//                Platform.runLater(() -> clock.setText("6"));
-//                Thread.sleep(1000);
+
                 Platform.runLater(() -> clock.setText("5"));
                 Thread.sleep(1000);
                 Platform.runLater(() -> clock.setText("4"));
