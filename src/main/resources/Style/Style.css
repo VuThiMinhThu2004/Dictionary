@@ -126,7 +126,7 @@
 }
 
 .list-cell {
-    -fx-text-fill:  #ffffff; /* saddle brown */
+    -fx-text-fill:  #000000;
     -fx-font-size: 16;
     -fx-font-weight: 700;
     -fx-padding: 5;
@@ -135,18 +135,12 @@
     -fx-border-radius: 5;
 }
 
-.list-cell:even,
-.list-cell:odd {
-    -fx-background-radius: 0;
-    -fx-border-radius: 0;
-}
-
 .list-cell:even {
-    -fx-background-color: #272829; /* eggshell */
+    -fx-background-color: #9EB8D9; /* Màu của cell chẵn */
 }
 
 .list-cell:odd {
-    -fx-background-color: #61677A; /* old paper */
+    -fx-background-color: #ffffff; /* Màu của cell lẻ */
 }
 
 .list-cell:filled:hover,
@@ -154,6 +148,7 @@
     -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #0C356A, #0174BE); /* Gradient màu nền từ trái sang phải */
     -fx-text-fill: white; /* Màu chữ */
 }
+
 
 .transparent {
     -fx-background-color: transparent;
