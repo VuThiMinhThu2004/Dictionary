@@ -6,7 +6,7 @@
  ## Tính năng chính:
  - Tính năng đăng ký, đăng nhập để cá nhân hóa trải nghiệm cho người dùng
    
- - Tra ... từ tiếng Anh khác nhau, có thể thực hiện các thao tác như tra nhanh bằng nháy đúp chuột,...
+ - Tra hơn 100000 từ tiếng Anh khác nhau, có thể thực hiện các thao tác như tra nhanh bằng nháy đúp chuột,...
 
 ![image](https://github.com/VuThiMinhThu2004/Dictionary/assets/124875538/6db41d78-28cc-437b-ad3b-44e8161c1a8c)
 
