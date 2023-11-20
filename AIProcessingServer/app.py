@@ -1,5 +1,4 @@
 import time
-
 import whisper
 from faster_whisper import WhisperModel
 from flask import Flask, request, jsonify

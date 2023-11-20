@@ -21,7 +21,7 @@
             <Font name="System Bold" size="15.0" />
         </font>
         <tooltip>
-            <Tooltip fx:id="tooltip2" text="Add" />
+            <Tooltip fx:id="tooltip2" text="Use it to add words" />
         </tooltip>
         <graphic>
             <ImageView fitHeight="45.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
@@ -52,7 +52,7 @@
             </ImageView>
         </graphic>
     </Button>
-    <Button fx:id="quizBtn" graphicTextGap="5.0" layoutX="-145.0" layoutY="356.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="85.0" styleClass="transparent-button" stylesheets="@../Style/Style.css">
+    <Button fx:id="quizBtn" graphicTextGap="5.0" layoutX="-145.0" layoutY="303.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="85.0" styleClass="transparent-button" stylesheets="@../Style/Style.css">
         <tooltip>
             <Tooltip fx:id="tooltip6" text="Quiz">
                 <font>
@@ -74,7 +74,7 @@
             </ImageView>
         </graphic>
     </Button>
-    <Button fx:id="hangmanBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="-145.0" layoutY="304.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" styleClass="transparent-button" stylesheets="@../Style/Style.css">
+    <Button fx:id="hangmanBtn" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="-145.0" layoutY="253.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" styleClass="transparent-button" stylesheets="@../Style/Style.css">
         <tooltip>
             <Tooltip fx:id="tooltip7" text="HangMan">
                 <font>
@@ -101,7 +101,7 @@
             <Font name="System Bold" size="15.0" />
         </font>
         <tooltip>
-            <Tooltip fx:id="tooltip3" text="Translate" />
+            <Tooltip fx:id="tooltip3" text="Translate sentences/words with 4 different languages" />
         </tooltip>
         <graphic>
             <ImageView fitHeight="45.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
@@ -114,27 +114,9 @@
             </ImageView>
         </graphic>
     </Button>
-    <Button fx:id="attachBtn" graphicTextGap="5.0" layoutX="-145.0" layoutY="253.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" styleClass="transparent-button" stylesheets="@../Style/Style.css">
-        <tooltip>
-            <Tooltip fx:id="tooltip5" text="Attachment" />
-        </tooltip>
-        <font>
-            <Font name="System Bold" size="15.0" />
-        </font>
-        <graphic>
-            <ImageView fitHeight="45.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@../IconsThu/Group%204.png" />
-                </image>
-            <effect>
-               <DropShadow />
-            </effect>
-            </ImageView>
-        </graphic>
-    </Button>
     <Button fx:id="searchBtn" graphicTextGap="5.0" layoutX="-145.0" layoutY="98.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="140.0" styleClass="transparent-button" stylesheets="@../Style/Style.css">
         <tooltip>
-            <Tooltip fx:id="tooltip1" text="Search" />
+            <Tooltip fx:id="tooltip1" text="Use it to search and/or modify words" />
         </tooltip>
         <font>
             <Font name="System Bold" size="15.0" />
@@ -150,7 +132,7 @@
             </ImageView>
         </graphic>
     </Button>
-   <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="329.0" layoutY="22.0" prefHeight="50.0" prefWidth="342.0" text="MY DICTIONARY" textAlignment="CENTER" wrapText="true">
+   <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="329.0" layoutY="22.0" prefHeight="50.0" prefWidth="342.0" text="MyDictionary" textAlignment="CENTER" wrapText="true">
       <font>
          <Font name="System Bold" size="40.0" />
       </font>

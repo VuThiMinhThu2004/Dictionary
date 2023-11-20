@@ -19,6 +19,9 @@ module com.example.dictionary {
     requires javafx.swing;
 
     opens Dictionary to javafx.fxml;
+//
+//    opens com.example.dictionary to javafx.fxml;
+//    exports com.example.dictionary;
 
     opens Dictionary.Models;
     opens Dictionary.Controllers;

@@ -57,3 +57,6 @@ Rice
 Hello
 Hello
 Hello
+Rice
+Bike
+Hello

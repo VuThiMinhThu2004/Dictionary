@@ -16,9 +16,6 @@ public class LoginCon implements Initializable {
     private Button Login;
 
     @FXML
-    private Hyperlink forgot_pw;
-
-    @FXML
     private Hyperlink no_acc;
 
     @FXML
@@ -28,7 +25,6 @@ public class LoginCon implements Initializable {
     private TextField usernameField;
 
     @FXML
-    private Label label_welcome;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Login.setOnAction(new EventHandler<ActionEvent>() {
@@ -44,32 +40,6 @@ public class LoginCon implements Initializable {
                 DB.changeScene(event, "/View/SignUp.fxml", "Sign Up!", null);
             }
         });
-    }
-
-    public void setUserInformation(String username) {
-        label_welcome.setText("Welcome " + username + "!");
-    }
-    @FXML
-    private void handleLogin(ActionEvent event) {
-        String username = usernameField.getText();
-        String password = passwordField.getText();
-
-        // Thực hiện xác thực tên người dùng và mật khẩu
-        // Ví dụ: Kiểm tra xem tên người dùng và mật khẩu có đúng hay không
-        if (username.equals("admin") && password.equals("password")) {
-            // Nếu đúng, hiển thị thông báo đăng nhập thành công
-            showAlert("Login Successful", "Welcome, " + username + "!");
-        } else {
-            // Nếu sai, hiển thị thông báo lỗi đăng nhập
-            showAlert("Login Failed", "Invalid username or password.");
-        }
-    }
-
-    @FXML
-    private void handleNoAccount(ActionEvent event) {
-        // Xử lý sự kiện khi người dùng nhấn vào liên kết "No account?"
-        showAlert("No Account", "Redirect to create account page...");
-        // Điều hướng sang trang tạo tài khoản (có thể thêm mã điều hướng ở đây)
     }
 
     private void showAlert(String title, String content) {
